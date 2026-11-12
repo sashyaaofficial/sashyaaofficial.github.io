@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="color-scheme" content="light">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sashya Paudel | Event Marketing Specialist, Toronto</title>
+<meta name="description" content="Sashya Paudel, Toronto event marketing specialist. Event funnels, social media and marketing automation that sell out events.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFAFD; --surface:#FFFFFF; --ink:#18141F; --muted:#5E5869; --line:#E4DEEC;
+  --plum:#5B2A91; --plum-soft:#EFE7F8; --amber:#E9A72E; --amber-ink:#7A520C;
+  --display:"Bricolage Grotesque", "Segoe UI", Helvetica, Arial, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", Helvetica, Arial, sans-serif;
+  color-scheme:light;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body);
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:var(--plum)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem}
+.lede{color:var(--muted);max-width:62ch;margin:0 0 2rem}
+section{padding:80px 0;border-top:1px solid var(--line)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .mark{font-family:var(--display);font-weight:800;text-decoration:none;color:var(--ink);font-size:1.1rem}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--muted);text-decoration:none;font-size:.95rem}
+nav ul a:hover{color:var(--ink)}
+@media (max-width:720px){nav ul{display:none}}
+
+/* hero */
+.hero{padding:72px 0 64px;border-top:0}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.6vw,4.8rem);font-weight:800;letter-spacing:-.035em}
+.hero .who{font-size:1.05rem;color:var(--muted);margin:0 0 18px}
+.hero .who strong{color:var(--ink)}
+.hero p.sub{font-size:1.2rem;max-width:44ch;margin:22px 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--plum)}
+.btn.primary{background:var(--plum);color:var(--bg)}
+.btn.ghost{color:var(--plum)}
+.btn:hover{filter:brightness(1.08)}
+
+/* ticket */
+.ticket{background:var(--surface);border:1px solid var(--line);border-radius:18px;display:grid;grid-template-columns:1fr 92px;
+  box-shadow:0 24px 50px -30px rgba(60,20,100,.45);overflow:hidden;position:relative}
+.ticket .main{padding:26px 24px}
+.ticket .stub{border-left:2px dashed var(--line);display:flex;align-items:center;justify-content:center;background:var(--plum-soft)}
+.ticket .stub span{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--plum);letter-spacing:.02em}
+.ticket .ev{font-family:var(--display);font-weight:600;font-size:1.25rem;margin:0 0 4px}
+.ticket .meta{color:var(--muted);font-size:.92rem;margin:0 0 22px}
+.cap{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:8px}
+.cap b{font-family:var(--display);font-size:1.6rem;line-height:1}
+.bar{height:12px;border-radius:99px;background:var(--plum-soft);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--plum),var(--amber));border-radius:99px;transition:width 1.8s cubic-bezier(.2,.8,.2,1)}
+.soldout{margin-top:16px;display:inline-block;padding:6px 12px;border:2px solid var(--amber);color:var(--amber-ink);border-radius:8px;font-weight:700;
+  transform:rotate(-4deg) scale(.6);opacity:0;transition:all .4s cubic-bezier(.3,1.6,.5,1) 1.7s}
+.ticket.go .soldout{opacity:1;transform:rotate(-4deg) scale(1)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+@media (max-width:520px){.ticket{grid-template-columns:1fr 62px}.ticket .stub span{font-size:1.1rem}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.stat{padding:26px 22px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,3.4vw,2.4rem);color:var(--plum);line-height:1.1}
+.stat span{color:var(--muted);font-size:.95rem}
+@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* funnel */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:18px;counter-reset:s}
+.step{appearance:none;border:2px solid var(--line);background:var(--surface);color:var(--ink);border-radius:14px;padding:16px 14px;text-align:left;cursor:pointer;font:inherit;position:relative}
+.step small{display:block;color:var(--muted);font-size:.82rem}
+.step strong{font-family:var(--display);font-size:1.05rem}
+.step[aria-selected="true"]{border-color:var(--plum);background:var(--plum-soft)}
+.step:hover{border-color:var(--plum)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;min-height:270px}
+.panel h3{font-size:1.5rem;margin-bottom:10px}
+.panel ul{margin:0;padding-left:20px}
+.panel li{margin-bottom:6px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tools span{font-size:.85rem;padding:4px 10px;border-radius:99px;background:var(--plum-soft);color:var(--plum);font-weight:700}
+.timeline{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 12px 18px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--plum)}
+.timeline li b{display:block;font-size:.9rem;color:var(--muted);font-weight:400}
+.note{color:var(--muted);font-size:.95rem}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}.panel{grid-template-columns:1fr}}
+
+/* growth */
+.growth{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end}
+.bars{display:flex;gap:28px;align-items:flex-end;height:260px;padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:16px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .b{width:100%;max-width:120px;border-radius:10px 10px 4px 4px;background:var(--plum-soft);height:0;transition:height 1.4s cubic-bezier(.2,.8,.2,1)}
+.col.after .b{background:linear-gradient(180deg,var(--amber),var(--plum))}
+.col b{font-family:var(--display);font-size:1.6rem;margin-top:10px}
+.col span{color:var(--muted);font-size:.9rem}
+.eng{display:grid;gap:12px}
+.eng div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;justify-content:space-between;align-items:baseline}
+.eng b{font-family:var(--display);font-size:1.7rem;color:var(--plum)}
+@media (max-width:760px){.growth{grid-template-columns:1fr}}
+
+/* work */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.filters button{font:inherit;font-weight:700;font-size:.92rem;padding:8px 16px;border-radius:99px;border:2px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.work{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.case .ph{aspect-ratio:16/7;background:repeating-linear-gradient(-45deg,var(--plum-soft),var(--plum-soft) 12px,transparent 12px,transparent 24px);
+  display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.88rem;border-bottom:1px solid var(--line)}
+.case .in{padding:22px}
+.case h3{font-size:1.3rem;margin-bottom:6px}
+.case .where{color:var(--muted);font-size:.92rem;margin:0 0 12px}
+.case details{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+.case summary{cursor:pointer;font-weight:700;color:var(--plum)}
+.case[hidden]{display:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chips span{font-size:.8rem;border:1px solid var(--line);border-radius:99px;padding:2px 9px;color:var(--muted)}
+@media (max-width:760px){.work{grid-template-columns:1fr}}
+
+/* path */
+.path{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative}
+.path li{border-top:3px solid var(--plum);padding-top:14px}
+.path li b{font-family:var(--display);font-size:1.4rem;display:block}
+.path li span{display:block;font-weight:700;margin:4px 0}
+.path li p{margin:0;color:var(--muted);font-size:.95rem}
+@media (max-width:860px){.path{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.path{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.skills h3{font-size:1.1rem;margin-bottom:8px;color:var(--plum)}
+.skills ul{margin:0;padding-left:18px;color:var(--ink)}
+@media (max-width:860px){.skills{grid-template-columns:1fr 1fr}}
+
+/* contact */
+.contact{background:var(--plum);color:#fff;border-radius:22px;padding:48px;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+.contact h2{color:#fff}
+.contact p{color:#EDE3F8;margin:0}
+.contact .btn{border-color:#fff}
+.contact .btn.primary{background:#fff;color:#3E1A66}
+.contact .btn.ghost{color:#fff}
+
+@media (max-width:760px){.contact{grid-template-columns:1fr;padding:32px}}
+footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem}
+
+
+/* v2 additions */
+.avail{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;padding:6px 14px;border-radius:99px;background:var(--plum-soft);color:var(--plum);margin-bottom:18px}
+.avail i{width:9px;height:9px;border-radius:50%;background:#2E9E5B;display:inline-block}
+.deep{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:22px}
+.deep>.ph{min-height:300px;height:100%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--line);background:repeating-linear-gradient(-45deg,var(--plum-soft),var(--plum-soft) 12px,transparent 12px,transparent 24px);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem}
+.deep .in{padding:30px 30px 30px 0}
+.deep h3{font-size:1.6rem;margin-bottom:6px}
+.deep .where{color:var(--muted);font-size:.95rem;margin:0}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:16px 0;font-size:.95rem}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0;font-weight:700}
+.deep h4{font-family:var(--display);font-size:1rem;margin:16px 0 6px}
+.deep ul{margin:0;padding-left:20px}
+.result{margin-top:16px;padding:14px 16px;border-radius:12px;background:var(--plum-soft)}
+.result b{color:var(--plum)}
+.todo{display:inline-block;font-size:.78rem;font-weight:700;padding:2px 8px;border-radius:6px;background:#FFF1D6;color:#7A520C;margin-left:4px;vertical-align:middle}
+
+.slot{border:2px dashed var(--line);background:transparent}
+.slot .in p{color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.gallery .ph{aspect-ratio:4/3;border-bottom:1px solid var(--line);background:repeating-linear-gradient(-45deg,var(--plum-soft),var(--plum-soft) 12px,transparent 12px,transparent 24px);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.88rem}
+.gallery figcaption{padding:12px 14px;font-weight:700;font-size:.95rem}
+.gallery figcaption span{display:block;font-weight:400;color:var(--muted);font-size:.85rem}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.2rem)}
+@media (max-width:860px){.deep{grid-template-columns:1fr;gap:0}.deep>.ph{min-height:200px;border-right:0;border-bottom:1px solid var(--line)}.deep .in{padding:24px}.gallery{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.gallery{grid-template-columns:1fr}}
+
+
+/* process artifacts */
+.process{grid-column:1/-1;border-top:1px solid var(--line);padding:24px 30px 28px}
+.process h4{font-family:var(--display);font-size:1.05rem;margin:0 0 4px}
+.process>p{color:var(--muted);font-size:.95rem;margin:0 0 16px}
+.track{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
+.track::before{content:"";position:absolute;left:8px;right:8px;top:9px;height:2px;background:var(--line)}
+.track div{position:relative;padding:28px 10px 0 0;font-size:.9rem}
+.track div::before{content:"";position:absolute;left:0;top:2px;width:16px;height:16px;border-radius:50%;background:var(--surface);border:3px solid var(--plum)}
+.track div.hot::before{border-color:var(--amber);background:var(--amber)}
+.track b{display:block;font-size:.82rem;color:var(--muted);font-weight:400}
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
+.flow div{flex:1 1 140px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--bg);font-size:.92rem}
+.flow div strong{display:block;font-family:var(--display);font-size:1rem}
+.flow div span{color:var(--muted);font-size:.85rem}
+.flow div.end{border-color:var(--plum);background:var(--plum-soft)}
+.stages4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stages4 figure{margin:0}
+.stages4 .ph{aspect-ratio:4/3;border-radius:10px;border:1px solid var(--line);background:repeating-linear-gradient(-45deg,var(--plum-soft),var(--plum-soft) 10px,transparent 10px,transparent 20px);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.82rem}
+.stages4 figcaption{font-weight:700;font-size:.9rem;margin-top:8px}
+.deep>.ph{position:relative}
+.stubtag{position:absolute;left:18px;bottom:18px;display:flex;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 10px 24px -16px rgba(60,20,100,.5);font-size:.82rem;color:var(--ink)}
+.stubtag span{padding:8px 12px}
+.stubtag b{padding:8px 10px;border-left:2px dashed var(--line);background:var(--plum-soft);color:var(--plum);font-family:var(--display)}
+@media (max-width:860px){.process{padding:20px 24px 24px}.track{grid-template-columns:1fr 1fr 1fr;row-gap:16px}.track::before{display:none}.stages4{grid-template-columns:1fr 1fr}}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== Clean white theme ===== */
+:root{--bg:#FFFFFF;--surface:#FFFFFF;--ink:#141218;--muted:#6B6775;--line:#ECEAF0;
+  --plum:#5B2A91;--plum-soft:#F6F3FA;--teal:#0E7C7B;--rose:#B23A6F;--indigo:#3346A8;--gold:#A86B00;}
+
+body{letter-spacing:.003em}
+section{padding:96px 0;border-top:0}
+section+section{border-top:1px solid var(--line)}
+nav{background:color-mix(in srgb,var(--bg) 92%,transparent)}
+h2{font-weight:600;letter-spacing:-.025em;color:var(--plum)}
+.hero h1{font-weight:600;letter-spacing:-.04em}
+.hero h1 .role{color:var(--plum)}
+.avail{background:transparent;border:1px solid var(--line);color:var(--ink);font-weight:400}
+.btn{border-width:1.5px}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.btn.ghost{color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink)}
+/* ticket: white, hairline, no heavy shadow */
+.ticket{box-shadow:0 1px 0 var(--line),0 30px 60px -45px rgba(20,18,24,.35);border-radius:14px}
+.ticket .stub{background:var(--bg)}
+.ticket .stub span{color:var(--rose);font-weight:600}
+.bar{background:var(--line);height:6px}
+.bar i{background:var(--plum)}
+.soldout{border-color:var(--rose);color:var(--rose)}
+/* stats: colourful numbers, no box */
+.stats{border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0;background:transparent}
+.stat{border-left:1px solid var(--line)}
+.stat b{font-weight:600}
+.stat:nth-child(1) b{color:var(--plum)} .stat:nth-child(2) b{color:var(--rose)}
+.stat:nth-child(3) b{color:var(--teal)} .stat:nth-child(4) b{color:var(--indigo)}
+/* deep dives */
+.deep{border:0;border-radius:0;border-top:1px solid var(--line);padding-top:8px;gap:40px}
+.deep>.ph,.case .ph,.gallery .ph,.stages4 .ph{background:#F7F6F9;border-radius:12px;border:0}
+
+.deep>.ph{margin:24px 0;min-height:320px}
+.deep .in{padding:24px 0}
+.deep h3{font-weight:600;letter-spacing:-.02em}
+.facts dt{font-size:.85rem;text-transform:none}
+.facts dd{font-weight:400}
+.deep:nth-of-type(1) .facts dd:first-of-type{color:var(--plum)}
+.deep:nth-of-type(2) .facts dd:first-of-type{color:var(--teal)}
+.deep:nth-of-type(3) .facts dd:first-of-type{color:var(--rose)}
+.deep h4{color:var(--muted);font-weight:600;font-size:.95rem}
+.result{background:transparent;border-left:3px solid var(--plum);border-radius:0;padding:4px 0 4px 16px}
+.deep:nth-of-type(2) .result{border-color:var(--teal)} .deep:nth-of-type(2) .result b{color:var(--teal)}
+.deep:nth-of-type(3) .result{border-color:var(--rose)} .deep:nth-of-type(3) .result b{color:var(--rose)}
+.process{border-top:1px dashed var(--line);padding:24px 0 32px}
+.track div::before{border-width:2px}
+.track div.hot::before{border-color:var(--rose);background:var(--rose)}
+.flow div{background:transparent}
+.flow div.end{background:transparent;border-color:var(--teal)}
+.flow div.end strong{color:var(--teal)}
+.stubtag{box-shadow:none}
+.stubtag b{background:var(--bg);color:var(--rose)}
+/* cards, chips, filters */
+.case{border:0;border-radius:0;background:transparent}
+.case .in{padding:16px 2px 8px}
+.case h3{font-weight:600}
+.chips span{border:0;background:#F4F3F6;color:var(--muted)}
+
+.filters button{border-width:1px;font-weight:400}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.slot{border:1px dashed var(--line);border-radius:12px}
+.gallery figure{border:0;border-radius:0;background:transparent}
+.gallery figcaption{padding:10px 0;font-weight:600}
+/* funnel steps */
+.step{border:1px solid var(--line);border-radius:10px}
+.step[aria-selected="true"]{background:transparent;border-color:var(--plum);box-shadow:inset 0 -3px 0 var(--plum)}
+.step[aria-selected="true"] strong{color:var(--plum)}
+.panel{border:0;border-top:1px solid var(--line);border-radius:0;padding:28px 0}
+.tools span{background:transparent;border:1px solid var(--line);color:var(--ink);font-weight:400}
+/* growth */
+.bars{border:0;border-radius:0;background:transparent;border-bottom:1px solid var(--line);padding:20px 0 0}
+.col .b{background:#EEEBF2}
+.col.after .b{background:var(--teal)}
+.col.after b{color:var(--teal)}
+.eng div{border:0;border-radius:0;border-bottom:1px solid var(--line);padding:14px 0;background:transparent}
+.eng div:nth-child(1) b{color:var(--indigo)} .eng div:nth-child(2) b{color:var(--rose)}
+.eng div:nth-child(3) b{color:var(--plum)} .eng div:nth-child(4) b{color:var(--teal)}
+/* path + skills */
+.path li{border-top-width:2px}
+.path li:nth-child(1){border-color:var(--gold)} .path li:nth-child(2){border-color:var(--teal)}
+.path li:nth-child(3){border-color:var(--indigo)} .path li:nth-child(4){border-color:var(--rose)} .path li:nth-child(5){border-color:var(--plum)}
+.path li b{font-weight:600}
+.skills div:nth-child(1) h3{color:var(--plum)} .skills div:nth-child(2) h3{color:var(--teal)}
+.skills div:nth-child(3) h3{color:var(--rose)} .skills div:nth-child(4) h3{color:var(--indigo)}
+.skills h3{font-weight:600}
+/* contact: white, typographic */
+.contact{background:transparent;color:var(--ink);border-top:1px solid var(--line);border-radius:0;padding:56px 0}
+.contact h2{color:var(--plum)}
+.contact p{color:var(--muted)}
+.contact .btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.contact .btn.ghost{color:var(--ink);border-color:var(--line)}
+
+.todo{font-weight:600}
+
+
+/* always white + more colour in type */
+html,body{background:#FFFFFF;color-scheme:light}
+#work h2{color:var(--plum)} #design h2{color:var(--rose)} #system h2{color:var(--teal)}
+#results h2{color:var(--indigo)} #ai h2{color:var(--teal)} #about h2{color:var(--rose)} #path h2{color:var(--gold)} #skills h2{color:var(--plum)}
+.deep:nth-of-type(1) h3{color:var(--plum)} .deep:nth-of-type(2) h3{color:var(--teal)} .deep:nth-of-type(3) h3{color:var(--rose)}
+.case:nth-child(5n+1) h3{color:var(--plum)} .case:nth-child(5n+2) h3{color:var(--teal)} .case:nth-child(5n+3) h3{color:var(--rose)}
+.case:nth-child(5n+4) h3{color:var(--indigo)} .case:nth-child(5n+5) h3{color:var(--gold)}
+.path li:nth-child(1) b{color:var(--gold)} .path li:nth-child(2) b{color:var(--teal)} .path li:nth-child(3) b{color:var(--indigo)}
+.path li:nth-child(4) b{color:var(--rose)} .path li:nth-child(5) b{color:var(--plum)}
+nav .mark{color:var(--plum)}
+
+
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0;align-content:start}
+.shots figure{margin:0;position:relative;border-radius:12px;overflow:hidden;background:#F4F3F6}
+.shots figure.big{grid-column:1/-1}
+.shots img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:3/2;max-width:100%;transition:transform .6s ease}
+.shots figure:not(.big) img{aspect-ratio:4/3}
+.shots figure:hover img{transform:scale(1.03)}
+.shots figcaption{grid-column:1/-1;font-size:.85rem;color:var(--muted)}
+.shots .stubtag{left:14px;bottom:14px}
+
+
+/* v4 additions */
+.trust{margin-top:22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 22px;color:var(--muted);font-size:.95rem}
+.trust span{font-family:var(--display);font-weight:600;color:var(--ink);font-size:1.02rem}
+.challenge{margin:14px 0 0;padding:0;font-size:1.02rem}
+.challenge b{color:var(--muted);font-weight:600;font-size:.85rem;display:block}
+.videos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.videos figure{margin:0}
+.vbox{aspect-ratio:16/9;border-radius:12px;background:#F4F3F6;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem;overflow:hidden}
+.vbox iframe,.vbox video{width:100%;height:100%;border:0;display:block}
+.videos figcaption{font-weight:600;margin-top:8px;font-size:.95rem}
+.ai{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.ai div{border-top:2px solid var(--line);padding-top:14px}
+.ai div:nth-child(1){border-color:var(--plum)} .ai div:nth-child(2){border-color:var(--teal)}
+.ai div:nth-child(3){border-color:var(--rose)} .ai div:nth-child(4){border-color:var(--indigo)}
+.ai h3{font-size:1.15rem;margin-bottom:6px}
+.ai p{margin:0;color:var(--ink);font-size:.98rem}
+.about{display:grid;grid-template-columns:280px 1fr;gap:44px;align-items:start}
+.about .ph{aspect-ratio:4/5;border-radius:14px;background:#F4F3F6;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.about p{max-width:62ch}
+.certs{margin-top:36px;border-top:1px solid var(--line);padding-top:22px}
+.certs h3{font-size:1.1rem;margin-bottom:10px;color:var(--gold)}
+.certs ul{margin:0;padding-left:18px;columns:2;column-gap:40px}
+.certs li{margin-bottom:6px}
+@media (max-width:860px){.videos{grid-template-columns:1fr}.ai{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.about .ph{max-width:260px}.certs ul{columns:1}}
+@media (max-width:520px){.ai{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="#top">Sashya Paudel</a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#ai">AI</a></li>
+      <li><a href="#system">How I work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Tools</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="avail"><i aria-hidden="true"></i>Open to full-time roles in Toronto</span>
+      <h1>Sashya Paudel, <span class="role">event marketing specialist.</span></h1>
+      <p class="sub">I plan and market corporate and industry events end to end, from event pages and ticketing to email automation and social media, with a background in multimedia design and web development.</p>
+      <div class="btns">
+        <a class="btn primary" href="Sashya_Paudel_CV_Event_Marketing.pdf" download>Download CV</a>
+        <a class="btn ghost" href="#work">See my work</a>
+      </div>
+    </div>
+    <div class="ticket" id="ticket" aria-label="Example event: 150 of 150 seats sold">
+      <div class="main">
+        <p class="ev">CQTA quarterly industry event</p>
+        <p class="meta">Toronto, for quality engineering leaders</p>
+        <div class="cap"><span>Seats sold</span><b><span id="seats">0</span> / 150</b></div>
+        <div class="bar"><i id="fill"></i></div>
+        <span class="soldout">Sold out</span>
+      </div>
+      <div class="stub"><span>Admit one</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="impact" style="padding-top:0;border-top:0">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b data-count="12" data-suffix="+">12+</b><span>events planned and marketed in two years</span></div>
+      <div class="stat"><b>Sold out</b><span>events at 150-person capacity</span></div>
+      <div class="stat"><b data-count="1596">1,596</b><span>LinkedIn followers, up from 300 in one year</span></div>
+      <div class="stat"><b data-count="147709">147,709</b><span>organic LinkedIn impressions, zero paid spend</span></div>
+    </div>
+    <p class="trust">Events I've marketed featured speakers and sponsors from <span>TD</span><span>BMO</span><span>Accenture</span><span>Thomson Reuters</span><span>Tricentis</span><span>Parasoft</span><span>Perforce</span><span>TTC Global</span><span>City of Brampton</span></p>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <p class="lede">Three areas that make up an event marketing role: running the events, filling them through email, and designing everything people see.</p>
+
+    <!-- DEEP DIVE 1: CQTA -->
+    <article class="deep">
+      <div class="shots">
+        <figure class="big"><img src="images/cqta-panel.webp" alt="Five panelists seated on stage at the CQTA AI adoption event in Mississauga" loading="lazy" width="1600" height="1067">
+          <div class="stubtag"><span>The Real AI Adoption Curve</span><b>Oct 2026</b></div></figure>
+        <figure><img src="images/cqta-keynote.webp" alt="Speaker at a Mississauga podium addressing a seated audience" loading="lazy" width="1000" height="667"></figure>
+        <figure><img src="images/cqta-group.webp" alt="Group photo of attendees and speakers in front of a CQTA Follow Us slide" loading="lazy" width="1000" height="750"></figure>
+        <figcaption>CQTA panel event, Mississauga, October 2026</figcaption>
+      </div>
+      <div class="in">
+        <h3>Quarterly industry events for CQTA</h3>
+        <p class="where">Canadian Quality &amp; Testing Association, Toronto, 2025 to present</p>
+        <p class="challenge"><b>The challenge</b>Fill a 150-seat room every quarter with a niche professional audience, and grow that audience organically.</p>
+        <dl class="facts">
+          <dt>My role</dt><dd>Event Marketing Lead (contract)</dd>
+          <dt>Worked with</dt><dd>CQTA organizers, speakers, sponsors and venue teams</dd>
+          <dt>Audience</dt><dd>Quality engineering and testing leaders</dd>
+        </dl>
+        <h4>What I did</h4>
+        <ul>
+          <li>Ran marketing for every quarterly event: event pages, ticketing, social media, newsletters and outreach.</li>
+          <li>Coordinated sponsors TTC Global, Parasoft, Perforce and Tricentis for the Summer Mega Event at TELUS Harbour.</li>
+          <li>Marketed an AI-adoption panel with speakers from TD, BMO, Accenture, Thomson Reuters and the City of Brampton.</li>
+          <li>Built a repeatable playbook so each new event launches from a tested structure.</li>
+        </ul>
+        <div class="result"><b>Result:</b> sold-out events at 150-person capacity, and LinkedIn growth from 300 to 1,596 followers in one year with no paid spend.</div>
+      </div>
+
+      <div class="process">
+        <h4>Watch</h4>
+        <p>Promotional and testimonial videos from CQTA events.</p>
+        <div class="videos">
+          <!-- To add a video: replace the vbox content with a YouTube embed, e.g.
+               <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="CQTA promo video" allowfullscreen loading="lazy"></iframe>
+               or a small file: <video src="videos/cqta-promo.mp4" controls preload="metadata" poster="images/cqta-panel.webp"></video> -->
+          <figure><div class="vbox">Add promotional video</div><figcaption>Event promo</figcaption></figure>
+          <figure><div class="vbox">Add testimonial video</div><figcaption>Attendee and speaker testimonials</figcaption></figure>
+        </div>
+      </div>
+      <div class="process">
+        <h4>Process: the final-week email countdown</h4>
+        <p>How the six automated emails for the AI-adoption event were timed, from announcement to post-event.</p>
+        <div class="track">
+          <div><b>Four days out</b>Announcement</div>
+          <div><b>Three days out</b>Special guest spotlight</div>
+          <div><b>Two days out</b>Full lineup</div>
+          <div><b>One day out</b>Last chance</div>
+          <div class="hot"><b>Event morning</b>Day-of reminder</div>
+          <div><b>Event night</b>Post-event thank you</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- DEEP DIVE 2: EMAIL MARKETING -->
+    <article class="deep">
+      <div class="ph">Add email or newsletter screenshots<div class="stubtag"><span>Email marketing</span><b>4 programs</b></div></div>
+      <div class="in">
+        <h3>Email marketing that fills rooms and drives sales</h3>
+        <p class="where">CQTA, Blacbiblio, QScreen AI and BLDC, 2024 to present</p>
+        <p class="challenge"><b>The challenge</b>Turn cold contact lists into event registrations, customers and engaged subscribers.</p>
+        <dl class="facts">
+          <dt>My role</dt><dd>Database, content, automation and reporting</dd>
+          <dt>Tools</dt><dd>LinkedIn Sales Navigator, Brevo, Klaviyo, Mailchimp</dd>
+          <dt>Scale</dt><dd>25,000+ contact database</dd>
+        </dl>
+        <h4>What I did</h4>
+        <ul>
+          <li>Built targeted contact databases using LinkedIn Sales Navigator, then validated and segmented them before any send.</li>
+          <li>Ran product campaigns for Blacbiblio, an educational publisher, that turned email into conversions and revenue.</li>
+          <li>Built event registration funnels and ticketing sequences for CQTA's quarterly events.</li>
+          <li>Wrote and designed recurring newsletters for QScreen AI (The QAI Signal) and BLDC.</li>
+        </ul>
+        <div class="result"><b>Result:</b> <span class="todo">Add Blacbiblio revenue or conversions, plus an open or click rate</span></div>
+      </div>
+      <div class="process">
+        <h4>Process: from prospect list to revenue</h4>
+        <p>Every email program I run follows the same five steps.</p>
+        <div class="flow">
+          <div><strong>Research</strong><span>Find the right audience in Sales Navigator</span></div>
+          <div><strong>Database</strong><span>Build, validate and segment</span></div>
+          <div><strong>Content</strong><span>Write and design each email</span></div>
+          <div><strong>Distribution</strong><span>Automated sequences and newsletters</span></div>
+          <div class="end"><strong>Conversion</strong><span>Tickets, sales and revenue</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- DEEP DIVE 3: DESIGN AND DEVELOPMENT -->
+    <article class="deep">
+      <div class="ph">Add QScreen AI website and social screenshots<div class="stubtag"><span>QScreen AI</span><b>Web + social</b></div></div>
+      <div class="in">
+        <h3>Design and development</h3>
+        <p class="where">Websites, social media design and print, 2024 to present</p>
+        <p class="challenge"><b>The challenge</b>Give a publicly listed company a credible, consistent presence across its website, social media and newsletter.</p>
+        <dl class="facts">
+          <dt>My role</dt><dd>Designer and developer</dd>
+          <dt>Tools</dt><dd>Adobe Creative Cloud, Canva, Framer</dd>
+          <dt>Featured</dt><dd>QScreen AI, publicly listed on the CSE</dd>
+        </dl>
+        <h4>What I did for QScreen AI</h4>
+        <ul>
+          <li>Designed and built the company website.</li>
+          <li>Design and run social media across LinkedIn, X and Instagram, including video content.</li>
+          <li>Design the investor newsletter, The QAI Signal.</li>
+        </ul>
+        <div class="result"><b>Result:</b> <span class="todo">Add a number, such as follower growth or site visits</span></div>
+      </div>
+      <div class="process">
+        <h4>More design work</h4>
+        <p>Branding, print and websites for other clients.</p>
+        <div class="stages4">
+          <figure><div class="ph">Add Blush images</div><figcaption>Blush, branding and web design</figcaption></figure>
+          <figure><div class="ph">Add Almas images</div><figcaption>Almas Lighting, price book</figcaption></figure>
+          <figure><div class="ph">Add screenshot</div><figcaption>Lejeune Institute, website <span class="todo">Optional</span></figcaption></figure>
+          <figure><div class="ph">Add screenshot</div><figcaption>Thinking North, website redesign <span class="todo">Optional</span></figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <h3 style="font-size:1.4rem;margin:40px 0 6px">More events I've organized</h3>
+    <p class="lede" style="margin-bottom:18px">Networking events and mixers I planned and marketed in Toronto.</p>
+    <div class="work">
+      <article class="case" data-tags="events">
+        <div class="ph">Add event photo</div>
+        <div class="in">
+          <h3>Big Business Events series</h3>
+          <p class="where">Toronto <span class="todo">Add years</span></p>
+          <p>A networking series of four to five events. The first one sold out. <span class="todo">Add attendance</span></p>
+          <div class="chips"><span>Event series</span><span>Ticketing</span><span>Promotion</span></div>
+        </div>
+      </article>
+      <article class="case" data-tags="events">
+        <div class="ph">Add event photo</div>
+        <div class="in">
+          <h3>AI in Real Estate, Construction and Trade Mixer</h3>
+          <p class="where">Soluna, Toronto, October 2026</p>
+          <p>Planned and promoted a networking mixer, including a promotional video.</p>
+          <div class="chips"><span>Event planning</span><span>Promotion</span><span>Video</span></div>
+        </div>
+      </article>
+      <article class="case" data-tags="events">
+        <div class="ph">Add event photo</div>
+        <div class="in">
+          <h3>AI Professionals Mixer</h3>
+          <p class="where">Toronto <span class="todo">Add date and venue</span></p>
+          <p>A networking mixer for AI professionals. <span class="todo">Add your role and attendance</span></p>
+          <div class="chips"><span>Networking</span><span>Promotion</span></div>
+        </div>
+      </article>
+      <article class="case" data-tags="events">
+        <div class="ph">Add event photo</div>
+        <div class="in">
+          <h3>Investor network gatherings</h3>
+          <p class="where">Toronto, with a partner investor network</p>
+          <p>Help organize and host dinners, luncheons and themed evenings such as Halloween and Cars &amp; Cigars for investors and public company leaders.</p>
+          <div class="chips"><span>Hosting</span><span>Guest experience</span><span>Finance audience</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="wrap">
+    <h2>How I use AI</h2>
+    <p class="lede">AI is built into how I work, so a small team can move at the pace of a large one. I use Claude and other AI tools every day, and every output is reviewed and edited by me.</p>
+    <div class="ai">
+      <div><h3>Content</h3><p>Drafting event posts, speaker spotlights and email copy, then editing them to each brand's voice.</p></div>
+      <div><h3>Automation</h3><p>Workflows that turn one press release into social posts and newsletter updates, and email sequences that run on their own.</p></div>
+      <div><h3>Research and data</h3><p>Faster audience research and list building, so every send goes to the right people.</p></div>
+      <div><h3>Building</h3><p>Investor decks built in code and this portfolio itself, designed and developed with AI-assisted tools.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="system">
+  <div class="wrap">
+    <h2>How I run an event campaign</h2>
+    <p class="lede">The five-stage process I use for every event. Pick a stage to see what I do in it.</p>
+    <div class="steps" role="tablist" aria-label="Event campaign stages">
+      <button class="step" role="tab" aria-selected="true" data-i="0"><small>Stage 1</small><strong>Event page</strong></button>
+      <button class="step" role="tab" aria-selected="false" data-i="1"><small>Stage 2</small><strong>Social campaign</strong></button>
+      <button class="step" role="tab" aria-selected="false" data-i="2"><small>Stage 3</small><strong>Email sequence</strong></button>
+      <button class="step" role="tab" aria-selected="false" data-i="3"><small>Stage 4</small><strong>Ticketing</strong></button>
+      <button class="step" role="tab" aria-selected="false" data-i="4"><small>Stage 5</small><strong>Follow-up</strong></button>
+    </div>
+    <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap">
+    <h2>Growing a niche audience organically</h2>
+    <p class="lede">CQTA speaks to quality engineering leaders, a small and specific audience. I grew its LinkedIn page more than five times over in one year without a single paid post.</p>
+    <div class="growth">
+      <div class="bars" id="bars" role="img" aria-label="LinkedIn followers grew from 300 to 1,596 in one year">
+        <div class="col"><div class="b" data-h="18.8"></div><b>300</b><span>Start of year</span></div>
+        <div class="col after"><div class="b" data-h="100"></div><b>1,596</b><span>One year later</span></div>
+      </div>
+      <div class="eng">
+        <div><span>Organic impressions</span><b>147,709</b></div>
+        <div><span>Reactions</span><b>2,793</b></div>
+        <div><span>Reposts</span><b>63</b></div>
+        <div><span>Paid promotion</span><b>$0</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="ph">Add headshot</div>
+    <div>
+      <h2>About me</h2>
+      <p>I'm an event marketer based in Toronto, with a Bachelor of Computer Science and an honours diploma in Multimedia Design and Development from Humber College. That mix is why I build the systems behind events, not just the posts.</p>
+      <p>Over the past few years I've marketed industry events for CQTA, run email and social programs for clients including Blacbiblio and QScreen AI, and organized networking events across the city. Outside work, I volunteer as Toronto chapter lead for The Great Nepali Diaspora, a community of Nepali professionals.</p>
+    </div>
+  </div>
+</section>
+
+<section id="path">
+  <div class="wrap">
+    <h2>From content to events</h2>
+    <p class="lede">Each step added a skill I use in event marketing today.</p>
+    <ol class="path">
+      <li><b>2019</b><span>Content creation</span><p>TechSathi and Girls in Tech Nepal, writing, outreach and community work.</p></li>
+      <li><b>2020</b><span>Design, web and outreach</span><p>Open My Network, New York, programs for NYC public schools.</p></li>
+      <li><b>2020 to 2023</b><span>Marketing management</span><p>Danson Solutions and ChimpVine, from marketing project manager to marketing director.</p></li>
+      <li><b>2022</b><span>Automation and email</span><p>Email campaigns, newsletters and websites for clients including Blacbiblio and QScreen AI.</p></li>
+      <li><b>2025</b><span>Event marketing</span><p>CQTA quarterly events, sold out at 150-person capacity.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Tools I use</h2>
+    <p class="lede">The software behind the work above.</p>
+    <div class="skills">
+      <div><h3>Design</h3><ul><li>Adobe Creative Cloud</li><li>Canva</li><li>Social media design</li><li>Print and price books</li></ul></div>
+      <div><h3>Development</h3><ul><li>Framer</li><li>Web design and development</li><li>JavaScript</li><li>Claude and AI automation</li></ul></div>
+      <div><h3>Marketing</h3><ul><li>Brevo, Klaviyo, Mailchimp</li><li>LinkedIn Sales Navigator</li><li>Meta Ads (Instagram, Facebook)</li><li>LinkedIn analytics</li></ul></div>
+      <div><h3>Events</h3><ul><li>Eventbrite</li><li>Registration funnels</li><li>Sponsor and speaker coordination</li><li>Event day and post-event comms</li></ul></div>
+    </div>
+    <div class="certs">
+      <h3>Certifications</h3>
+      <ul>
+        <li>Complete Agile Scrum Master Certification Training</li>
+        <li>Gamification: Motivation Psychology and the Art of Engagement</li>
+        <li>YouTube SEO and Algorithm Mastery</li>
+        <li><span class="todo">In progress</span> Add new course here</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-top:0">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Hiring for an events or marketing role?</h2>
+        <p>I'm available for full-time roles in Toronto. My CV has the full details, or email me to set up a conversation.</p>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="Sashya_Paudel_CV_Event_Marketing.pdf" download>Download CV</a>
+        <a class="btn ghost" href="mailto:sashyaaofficial@gmail.com">Email Sashya</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">Sashya Paudel, Toronto. <a href="https://www.linkedin.com/in/hi-i-amsashya-paudel" target="_blank" rel="noopener">LinkedIn</a>. Version 2, November 2026.</div></footer>
+
+<script>
+const stages=[
+ {t:"Event page",d:"The page does the selling before anyone opens an email.",l:["Clear title, date, venue and who it's for","Speakers and sponsors front and centre","Community discount codes","One call to action: get your ticket"],tools:["Eventbrite","Copywriting","Design"],side:"<p class='note'>Every event I run launches from the same page structure, so each new event starts from a proven layout.</p>"},
+ {t:"Social campaign",d:"Organic LinkedIn content built for a niche professional audience.",l:["Speaker spotlights and panel announcements","Countdown posts timed with the email sequence","Sponsor spotlights","Post-event highlights that sell the next one"],tools:["LinkedIn","Instagram","X","AI-assisted drafting"],side:"<p><b style='font-family:var(--display);font-size:2rem;color:var(--plum)'>300 to 1,596</b><br><span class='note'>followers in one year, with no paid spend</span></p>"},
+ {t:"Email sequence",d:"Six automated emails in the final days, each with one job.",l:["Segmented lists so every send lands with the right people","List hygiene before each send to protect deliverability","A post-event email that keeps the audience warm"],tools:["Brevo","Segmentation","Automation"],side:"<ol class='timeline'><li><b>Four days out</b>Announcement</li><li><b>Three days out</b>Special guest spotlight</li><li><b>Two days out</b>Full lineup</li><li><b>One day out</b>Last chance</li><li><b>Event morning</b>Day-of reminder</li><li><b>Event night</b>Post-event thank you</li></ol>"},
+ {t:"Ticketing",d:"Every channel feeds one ticketing funnel, so nothing leaks.",l:["One ticketing page that every channel points to","Community discount codes","Sales tracked against the 150-seat capacity"],tools:["Eventbrite","Discount tracking","Reporting"],side:"<p><b style='font-family:var(--display);font-size:2rem;color:var(--plum)'>150 / 150</b><br><span class='note'>seats sold at sold-out CQTA events</span></p>"},
+ {t:"Follow-up",d:"The event ends, the relationship doesn't.",l:["Same-night thank you email","Highlight posts for attendees and sponsors","Attendees carried into the next event's list"],tools:["Brevo","LinkedIn","Sponsor reporting"],side:"<p class='note'>Post-event content is the first piece of marketing for the next event, which is how each quarter starts with a warm audience.</p>"}
+];
+const panel=document.getElementById('panel'),tabs=[...document.querySelectorAll('.step')];
+function show(i){tabs.forEach((b,j)=>b.setAttribute('aria-selected',j===i));const s=stages[i];
+ panel.innerHTML=`<div><h3>${s.t}</h3><p>${s.d}</p><ul>${s.l.map(x=>`<li>${x}</li>`).join('')}</ul><div class="tools">${s.tools.map(x=>`<span>${x}</span>`).join('')}</div></div><div>${s.side}</div>`;}
+tabs.forEach((b,i)=>{b.addEventListener('click',()=>show(i));b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){tabs[(i+1)%5].focus();show((i+1)%5)}if(e.key==='ArrowLeft'){tabs[(i+4)%5].focus();show((i+4)%5)}})});
+show(0);
+
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+ const f=b.dataset.f;document.querySelectorAll('.case').forEach(c=>c.hidden=!(f==='all'||c.dataset.tags.includes(f)));}));
+
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function countUp(el,to,suffix=''){if(reduce){el.textContent=to.toLocaleString()+suffix;return}
+ const t0=performance.now(),dur=1600;(function f(t){const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);
+ el.textContent=Math.round(to*e).toLocaleString()+suffix;if(p<1)requestAnimationFrame(f)})(t0)}
+// hero ticket
+window.addEventListener('load',()=>{const t=document.getElementById('ticket');document.getElementById('fill').style.width='100%';t.classList.add('go');countUp(document.getElementById('seats'),150)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;
+ if(el.id==='bars'){el.querySelectorAll('.b').forEach(b=>b.style.height=b.dataset.h+'%')}
+ else if(el.dataset.count){countUp(el,+el.dataset.count,el.dataset.suffix||'')}
+ io.unobserve(el)}),{threshold:.4});
+document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));io.observe(document.getElementById('bars'));
+</script>
+</body>
+</html>
