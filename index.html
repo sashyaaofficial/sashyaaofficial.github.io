@@ -205,6 +205,14 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem}
 .stages4 .ph{aspect-ratio:4/3;border-radius:10px;border:1px solid var(--line);background:repeating-linear-gradient(-45deg,var(--plum-soft),var(--plum-soft) 10px,transparent 10px,transparent 20px);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.82rem}
 .stages4 figcaption{font-weight:700;font-size:.9rem;margin-top:8px}
 .deep>.ph{position:relative}
+.deep>.mail{position:relative;display:block;min-height:440px;background:var(--plum-soft);border-right:1px solid var(--line);overflow:hidden}
+.mail .frame{position:absolute;top:32px;left:50%;transform:translateX(-50%);width:min(78%,360px);bottom:0;overflow:hidden;border-radius:12px 12px 0 0;box-shadow:0 18px 40px -20px rgba(60,20,100,.55);background:#fff}
+.mail .frame img{display:block;width:100%;height:auto;transition:transform 6s ease}
+.mail:hover .frame img,.mail:focus-visible .frame img{transform:translateY(calc(-100% + var(--fh,400px)))}
+.mail::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(transparent,var(--plum-soft));pointer-events:none}
+.mail .stubtag{z-index:1}
+@media (max-width:860px){.deep>.mail{min-height:420px;border-right:0;border-bottom:1px solid var(--line)}}
+@media (prefers-reduced-motion:reduce){.mail .frame img{transition:none}.mail:hover .frame img{transform:none}}
 .stubtag{position:absolute;left:18px;bottom:18px;display:flex;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 10px 24px -16px rgba(60,20,100,.5);font-size:.82rem;color:var(--ink)}
 .stubtag span{padding:8px 12px}
 .stubtag b{padding:8px 10px;border-left:2px dashed var(--line);background:var(--plum-soft);color:var(--plum);font-family:var(--display)}
@@ -469,7 +477,10 @@ nav .mark{color:var(--plum)}
 
     <!-- DEEP DIVE 2: EMAIL MARKETING -->
     <article class="deep">
-      <div class="ph">Add email or newsletter screenshots<div class="stubtag"><span>Email marketing</span><b>4 programs</b></div></div>
+      <a class="mail" href="images/email-cqta-special-guest.webp" target="_blank" rel="noopener" aria-label="Open the full CQTA special guest email">
+        <span class="frame"><img src="images/email-cqta-special-guest.webp" alt="CQTA special guest announcement email: The CIO of Brampton is coming. Are you? With speaker card, lineup and Secure My Seat button" loading="lazy" width="659" height="2000"></span>
+        <span class="stubtag"><span>CQTA special guest email</span><b>Oct 2026</b></span>
+      </a>
       <div class="in">
         <h3>Email marketing that fills rooms and drives sales</h3>
         <p class="where">CQTA, Blacbiblio, QScreen AI and BLDC, 2024 to present</p>
@@ -715,6 +726,9 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return
  else if(el.dataset.count){countUp(el,+el.dataset.count,el.dataset.suffix||'')}
  io.unobserve(el)}),{threshold:.4});
 document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));io.observe(document.getElementById('bars'));
+</script>
+<script>
+(function(){var f=document.querySelectorAll('.mail .frame');function set(){f.forEach(function(e){e.style.setProperty('--fh',e.clientHeight+'px')})}set();addEventListener('resize',set)})();
 </script>
 </body>
 </html>
