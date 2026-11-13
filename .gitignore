@@ -1,3 +1,7 @@
 # macOS and local Claude Code settings
 .DS_Store
 .claude/
+
+# Raw phone/camera videos: convert to .mp4 before publishing
+*.MOV
+*.mov
