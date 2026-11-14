@@ -367,6 +367,41 @@ nav .mark{color:var(--plum)}
 @media (max-width:860px){.videos{grid-template-columns:1fr}.videos.tall{grid-template-columns:1fr 1fr}.ai{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.about .ph{max-width:260px}.certs ul{columns:1}}
 @media (max-width:520px){.ai{grid-template-columns:1fr}}
 
+
+/* QScreen section */
+.emailshot{position:relative;margin:24px 0}
+.emailshot .frame{display:block;height:520px;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:#F5F5F5;position:relative}
+.emailshot .frame img{display:block;width:100%;height:auto;transition:transform 6s ease}
+.emailshot .frame:hover img{transform:translateY(calc(-100% + 520px))}
+.emailshot .frame::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(transparent,#fff);pointer-events:none}
+.emailshot .stubtag{left:14px;bottom:14px;z-index:2}
+.emailshot .cap{font-size:.85rem;color:var(--muted);margin:10px 0 0}
+@media (prefers-reduced-motion:reduce){.emailshot .frame:hover img{transform:none}}
+@media (max-width:860px){.emailshot .frame{height:420px}.emailshot .frame:hover img{transform:translateY(calc(-100% + 420px))}}
+
+
+.shots.one{grid-template-columns:1fr}
+.shots a{display:block}
+.qsite{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.qsite a,.posts a{display:block;text-decoration:none;color:var(--ink)}
+.qsite img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:10px;border:1px solid var(--line);display:block}
+.qsite span,.posts span{display:block;font-size:.85rem;font-weight:600;margin-top:6px}
+.posts span{color:var(--muted);font-weight:400}
+.posts{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.posts img{width:100%;height:auto;aspect-ratio:1;border-radius:10px;display:block;transition:transform .3s}
+.posts a:hover img,.qsite a:hover img{transform:translateY(-3px)}
+.carousel{max-width:520px}
+.track2{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:12px;scrollbar-width:none}
+.track2::-webkit-scrollbar{display:none}
+.track2 img{flex:0 0 100%;width:100%;height:auto;aspect-ratio:1;scroll-snap-align:start;display:block}
+.cnav{display:flex;align-items:center;gap:14px;margin-top:10px}
+.cnav button{font:inherit;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer}
+.cnav button:hover{border-color:var(--ink)}
+.count{font-size:.9rem;color:var(--muted);min-width:44px;text-align:center}
+.emailshot.nl .frame{height:560px;max-width:520px}
+.emailshot.nl .frame:hover img{transform:translateY(calc(-100% + 560px));transition:transform 14s linear}
+@media (max-width:860px){.qsite{grid-template-columns:1fr}.posts{grid-template-columns:1fr 1fr}.emailshot.nl .frame{height:420px}.emailshot.nl .frame:hover img{transform:translateY(calc(-100% + 420px))}}
+
 </style>
 </head>
 <body>
@@ -517,7 +552,11 @@ nav .mark{color:var(--plum)}
 
     <!-- DEEP DIVE 3: DESIGN AND DEVELOPMENT -->
     <article class="deep">
-      <div class="ph">Add QScreen AI website and social screenshots<div class="stubtag"><span>QScreen AI</span><b>Web + social</b></div></div>
+      <div class="shots one">
+        <figure class="big"><a href="images/qscreen-site-home.webp" target="_blank" rel="noopener"><img src="images/qscreen-site-home.webp" alt="QScreen AI homepage hero: QAI Platform headline with a purple signal-wave banner image" loading="lazy" width="1400" height="898"></a>
+          <div class="stubtag"><span>q-screen.ai</span><b>Website</b></div></figure>
+        <figcaption>QScreen AI homepage, designed and built in 2026</figcaption>
+      </div>
       <div class="in">
         <h3>Design and development</h3>
         <p class="where">Websites, social media design and print, 2024 to present</p>
@@ -533,7 +572,49 @@ nav .mark{color:var(--plum)}
           <li>Design and run social media across LinkedIn, X and Instagram, including video content.</li>
           <li>Design the investor newsletter, The QAI Signal.</li>
         </ul>
-        <div class="result"><b>Result:</b> <span class="todo">Add a number, such as follower growth or site visits</span></div>
+        <div class="result"><b>Result:</b> an investor newsletter averaging a 26% open rate across Issues 02 to 04 on the main shareholder list, and a consistent brand across web, social and email.</div>
+      </div>
+      <div class="process">
+        <h4>The website</h4>
+        <p>Homepage, investor relations page and press release archive.</p>
+        <div class="qsite">
+          <a href="images/qscreen-site-home.webp" target="_blank" rel="noopener"><img src="images/qscreen-site-home.webp" alt="QScreen AI homepage" loading="lazy" width="1400" height="898"><span>Homepage</span></a>
+          <a href="images/qscreen-site-investors.webp" target="_blank" rel="noopener"><img src="images/qscreen-site-investors.webp" alt="QScreen AI investors page with live CSE stock chart" loading="lazy" width="1400" height="986"><span>Investors page</span></a>
+          <a href="images/qscreen-site-press.webp" target="_blank" rel="noopener"><img src="images/qscreen-site-press.webp" alt="QScreen AI press release archive in a dark theme" loading="lazy" width="1400" height="923"><span>Press releases</span></a>
+        </div>
+      </div>
+      <div class="process">
+        <h4>Social media: a six-slide product carousel</h4>
+        <p>Explains MobileWellbeing remote monitoring step by step, so a non-technical audience follows it in one swipe.</p>
+        <div class="carousel" aria-roledescription="carousel" aria-label="MobileWellbeing carousel">
+          <div class="track2" tabindex="0">
+            <img src="images/qscreen-mw-1.webp" alt="Slide 1: Care that doesn't stop at the clinic door" loading="lazy" width="900" height="900">
+            <img src="images/qscreen-mw-2.webp" alt="Slide 2: A lot can change between appointments" loading="lazy" width="900" height="900">
+            <img src="images/qscreen-mw-3.webp" alt="Slide 3: Patients wear a simple device that tracks vital signs" loading="lazy" width="900" height="900">
+            <img src="images/qscreen-mw-4.webp" alt="Slide 4: The AI watches the data for unusual patterns" loading="lazy" width="900" height="900">
+            <img src="images/qscreen-mw-5.webp" alt="Slide 5: If something looks off, the care team gets an alert" loading="lazy" width="900" height="900">
+            <img src="images/qscreen-mw-6.webp" alt="Slide 6: Built for hospitals, research programs and patients" loading="lazy" width="900" height="900">
+          </div>
+          <div class="cnav"><button type="button" data-d="-1" aria-label="Previous slide">&larr;</button><span class="count">1 / 6</span><button type="button" data-d="1" aria-label="Next slide">&rarr;</button></div>
+        </div>
+      </div>
+      <div class="process">
+        <h4>Social media: single posts</h4>
+        <p>Product posts, plus a "Capital Markets Explained" series that turns financing news into plain language for retail investors.</p>
+        <div class="posts">
+          <a href="images/qscreen-post-scans.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-scans.webp" alt="Post: 720,000+ real-world scans" loading="lazy" width="900" height="900"><span>Proof point</span></a>
+          <a href="images/qscreen-post-answers.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-answers.webp" alt="Post: Four simple answers from a 90-second screening" loading="lazy" width="900" height="900"><span>Product explainer</span></a>
+          <a href="images/qscreen-post-hardware.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-hardware.webp" alt="Post: AI screening shouldn't always require new hardware" loading="lazy" width="900" height="900"><span>Product benefit</span></a>
+          <a href="images/qscreen-post-unit.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-unit.webp" alt="Post: What is a unit in a financing?" loading="lazy" width="900" height="900"><span>Capital Markets Explained</span></a>
+          <a href="images/qscreen-post-debt.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-debt.webp" alt="Post: Shares for debt, explained" loading="lazy" width="900" height="900"><span>Capital Markets Explained</span></a>
+        </div>
+      </div>
+      <div class="process">
+        <h4>Investor newsletter: The QAI Signal, Issue 04</h4>
+        <p>Written, designed and sent through Brevo. Hover to scroll the full issue.</p>
+        <div class="emailshot nl">
+          <a class="frame" href="images/qscreen-newsletter.webp" target="_blank" rel="noopener" aria-label="Open the full QAI Signal newsletter"><img src="images/qscreen-newsletter.webp" alt="The QAI Signal Issue 04, October 2026: financing complete, debt settlement explained, and by-the-numbers section" loading="lazy" width="1100" height="5365"></a>
+        </div>
       </div>
       <div class="process">
         <h4>More design work</h4>
@@ -732,6 +813,11 @@ document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));io.observe
 </script>
 <script>
 (function(){var f=document.querySelectorAll('.mail .frame');function set(){f.forEach(function(e){e.style.setProperty('--fh',e.clientHeight+'px')})}set();addEventListener('resize',set)})();
+document.querySelectorAll('.carousel').forEach(c=>{const t=c.querySelector('.track2'),n=t.children.length,ct=c.querySelector('.count');
+ const idx=()=>Math.round(t.scrollLeft/t.clientWidth);
+ c.querySelectorAll('.cnav button').forEach(b=>b.addEventListener('click',()=>{const i=Math.min(n-1,Math.max(0,idx()+ +b.dataset.d));t.scrollTo({left:i*t.clientWidth,behavior:'smooth'})}));
+ t.addEventListener('scroll',()=>{ct.textContent=(idx()+1)+' / '+n});
+ t.addEventListener('keydown',e=>{if(e.key==='ArrowRight')c.querySelector('[data-d="1"]').click();if(e.key==='ArrowLeft')c.querySelector('[data-d="-1"]').click()});});
 </script>
 </body>
 </html>
