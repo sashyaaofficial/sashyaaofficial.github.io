@@ -318,7 +318,7 @@ h2{font-weight:600;letter-spacing:-.025em;color:var(--plum)}
 
 /* always white + more colour in type */
 html,body{background:#FFFFFF;color-scheme:light}
-#work h2{color:var(--plum)} #design h2{color:var(--rose)} #system h2{color:var(--teal)}
+#work h2,#events h2{color:var(--plum)} #email h2{color:var(--teal)} #design h2{color:var(--rose)} #system h2{color:var(--teal)}
 #results h2{color:var(--indigo)} #ai h2{color:var(--teal)} #about h2{color:var(--rose)} #path h2{color:var(--gold)} #skills h2{color:var(--plum)}
 .deep:nth-of-type(1) h3{color:var(--plum)} .deep:nth-of-type(2) h3{color:var(--teal)} .deep:nth-of-type(3) h3{color:var(--rose)}
 .case:nth-child(5n+1) h3{color:var(--plum)} .case:nth-child(5n+2) h3{color:var(--teal)} .case:nth-child(5n+3) h3{color:var(--rose)}
@@ -405,6 +405,12 @@ nav .mark{color:var(--plum)}
 .emailshot.nl .frame:hover img{transform:translateY(calc(-100% + 560px));transition:transform 14s linear}
 @media (max-width:860px){.qsite{grid-template-columns:1fr}.posts{grid-template-columns:1fr 1fr}.emailshot.nl .frame{height:420px}.emailshot.nl .frame:hover img{transform:translateY(calc(-100% + 420px))}}
 
+
+/* Featured CQTA highlight */
+.deep.featured{border:2px solid var(--plum);border-radius:18px;padding:0;background:linear-gradient(180deg,var(--plum-soft),var(--surface) 420px);box-shadow:0 24px 50px -36px rgba(60,20,100,.6)}
+.deep.featured .shots{margin:22px 0 22px 22px}
+.feat{display:inline-block;background:var(--plum);color:#fff;font-family:var(--display);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin:0 0 12px}
+@media (max-width:860px){.deep.featured .shots{margin:16px}}
 </style>
 </head>
 <body>
@@ -412,7 +418,9 @@ nav .mark{color:var(--plum)}
   <div class="wrap">
     <a class="mark" href="#top">Sashya Paudel</a>
     <ul>
-      <li><a href="#work">Work</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#email">Email</a></li>
+      <li><a href="#design">Design</a></li>
       <li><a href="#ai">AI</a></li>
       <li><a href="#system">How I work</a></li>
       <li><a href="#about">About</a></li>
@@ -430,7 +438,7 @@ nav .mark{color:var(--plum)}
       <p class="sub">I plan and market corporate and industry events end to end, from event pages and ticketing to email automation and social media, with a background in multimedia design and web development.</p>
       <div class="btns">
         <a class="btn primary" href="Sashya_Paudel_CV_Event_Marketing.pdf" download>Download CV</a>
-        <a class="btn ghost" href="#work">See my work</a>
+        <a class="btn ghost" href="#events">See my events</a>
       </div>
     </div>
     <div class="ticket" id="ticket" aria-label="Example event: 150 of 150 seats sold">
@@ -458,13 +466,13 @@ nav .mark{color:var(--plum)}
   </div>
 </section>
 
-<section id="work">
+<section id="events">
   <div class="wrap">
-    <h2>Selected work</h2>
-    <p class="lede">Three areas that make up an event marketing role: running the events, filling them through email, and designing everything people see.</p>
+    <h2>Events</h2>
+    <p class="lede">The events I plan and market, starting with my main client, CQTA, followed by the networking events and mixers I've run across Toronto.</p>
 
     <!-- DEEP DIVE 1: CQTA -->
-    <article class="deep">
+    <article class="deep featured">
       <div class="shots">
         <figure class="big"><img src="images/cqta-panel.webp" alt="Five panelists seated on stage at the CQTA AI adoption event in Mississauga" loading="lazy" width="1600" height="1067">
           <div class="stubtag"><span>The Real AI Adoption Curve</span><b>Oct 2026</b></div></figure>
@@ -473,6 +481,7 @@ nav .mark{color:var(--plum)}
         <figcaption>CQTA panel event, Mississauga, October 2026</figcaption>
       </div>
       <div class="in">
+        <span class="feat">Featured event · Sold out at 150 seats</span>
         <h3>Quarterly industry events for CQTA</h3>
         <p class="where">Canadian Quality &amp; Testing Association, Toronto, 2025 to present</p>
         <p class="challenge"><b>The challenge</b>Fill a 150-seat room every quarter with a niche professional audience, and grow that audience organically.</p>
@@ -516,6 +525,54 @@ nav .mark{color:var(--plum)}
       </div>
     </article>
 
+    <h3 style="font-size:1.4rem;margin:40px 0 6px">More events I've organized</h3>
+    <p class="lede" style="margin-bottom:18px">Networking events and mixers I planned and marketed in Toronto.</p>
+    <div class="work">
+      <article class="case" data-tags="events">
+        <div class="ph">Add event photo</div>
+        <div class="in">
+          <h3>Big Business Events series</h3>
+          <p class="where">Toronto <span class="todo">Add years</span></p>
+          <p>A networking series of four to five events. The first one sold out. <span class="todo">Add attendance</span></p>
+          <div class="chips"><span>Event series</span><span>Ticketing</span><span>Promotion</span></div>
+        </div>
+      </article>
+      <article class="case" data-tags="events">
+        <div class="ph">Add event photo</div>
+        <div class="in">
+          <h3>AI in Real Estate, Construction and Trade Mixer</h3>
+          <p class="where">Soluna, Toronto, October 2026</p>
+          <p>Planned and promoted a networking mixer, including a promotional video.</p>
+          <div class="chips"><span>Event planning</span><span>Promotion</span><span>Video</span></div>
+        </div>
+      </article>
+      <article class="case" data-tags="events">
+        <div class="ph">Add event photo</div>
+        <div class="in">
+          <h3>AI Professionals Mixer</h3>
+          <p class="where">Toronto <span class="todo">Add date and venue</span></p>
+          <p>A networking mixer for AI professionals. <span class="todo">Add your role and attendance</span></p>
+          <div class="chips"><span>Networking</span><span>Promotion</span></div>
+        </div>
+      </article>
+      <article class="case" data-tags="events">
+        <div class="ph">Add event photo</div>
+        <div class="in">
+          <h3>Investor network gatherings</h3>
+          <p class="where">Toronto, with a partner investor network</p>
+          <p>Help organize and host dinners, luncheons and themed evenings such as Halloween and Cars &amp; Cigars for investors and public company leaders.</p>
+          <div class="chips"><span>Hosting</span><span>Guest experience</span><span>Finance audience</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="email">
+  <div class="wrap">
+    <h2>Email marketing</h2>
+    <p class="lede">How I fill those rooms, and drive sales for other clients, through email.</p>
+
     <!-- DEEP DIVE 2: EMAIL MARKETING -->
     <article class="deep">
       <a class="mail" href="images/email-cqta-special-guest.webp" target="_blank" rel="noopener" aria-label="Open the full CQTA special guest email">
@@ -552,6 +609,13 @@ nav .mark{color:var(--plum)}
         </div>
       </div>
     </article>
+  </div>
+</section>
+
+<section id="design">
+  <div class="wrap">
+    <h2>Websites and design</h2>
+    <p class="lede">Websites, social media, newsletters and print I've designed and built.</p>
 
     <!-- DEEP DIVE 3: DESIGN AND DEVELOPMENT -->
     <article class="deep">
@@ -639,47 +703,6 @@ nav .mark{color:var(--plum)}
         </div>
       </div>
     </article>
-
-    <h3 style="font-size:1.4rem;margin:40px 0 6px">More events I've organized</h3>
-    <p class="lede" style="margin-bottom:18px">Networking events and mixers I planned and marketed in Toronto.</p>
-    <div class="work">
-      <article class="case" data-tags="events">
-        <div class="ph">Add event photo</div>
-        <div class="in">
-          <h3>Big Business Events series</h3>
-          <p class="where">Toronto <span class="todo">Add years</span></p>
-          <p>A networking series of four to five events. The first one sold out. <span class="todo">Add attendance</span></p>
-          <div class="chips"><span>Event series</span><span>Ticketing</span><span>Promotion</span></div>
-        </div>
-      </article>
-      <article class="case" data-tags="events">
-        <div class="ph">Add event photo</div>
-        <div class="in">
-          <h3>AI in Real Estate, Construction and Trade Mixer</h3>
-          <p class="where">Soluna, Toronto, October 2026</p>
-          <p>Planned and promoted a networking mixer, including a promotional video.</p>
-          <div class="chips"><span>Event planning</span><span>Promotion</span><span>Video</span></div>
-        </div>
-      </article>
-      <article class="case" data-tags="events">
-        <div class="ph">Add event photo</div>
-        <div class="in">
-          <h3>AI Professionals Mixer</h3>
-          <p class="where">Toronto <span class="todo">Add date and venue</span></p>
-          <p>A networking mixer for AI professionals. <span class="todo">Add your role and attendance</span></p>
-          <div class="chips"><span>Networking</span><span>Promotion</span></div>
-        </div>
-      </article>
-      <article class="case" data-tags="events">
-        <div class="ph">Add event photo</div>
-        <div class="in">
-          <h3>Investor network gatherings</h3>
-          <p class="where">Toronto, with a partner investor network</p>
-          <p>Help organize and host dinners, luncheons and themed evenings such as Halloween and Cars &amp; Cigars for investors and public company leaders.</p>
-          <div class="chips"><span>Hosting</span><span>Guest experience</span><span>Finance audience</span></div>
-        </div>
-      </article>
-    </div>
   </div>
 </section>
 
