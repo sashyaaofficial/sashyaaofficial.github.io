@@ -394,6 +394,13 @@ nav .mark{color:var(--plum)}
 .posts img{width:100%;height:auto;aspect-ratio:1;border-radius:10px;display:block;transition:transform .3s}
 .posts a:hover img,.qsite a:hover img{transform:translateY(-3px)}
 .posts.four{grid-template-columns:repeat(4,1fr)}
+.mock{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mock a{display:block;text-decoration:none;color:var(--ink)}
+.mock a.wide{grid-column:1/-1}
+.mock img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:12px;transition:transform .3s}
+.mock a:hover img{transform:translateY(-3px)}
+.mock span{display:block;font-size:.85rem;font-weight:600;margin-top:6px}
+@media (max-width:860px){.mock{grid-template-columns:1fr}}
 @media (max-width:860px){.posts.four{grid-template-columns:1fr 1fr}}
 .posts.pages img{aspect-ratio:612/792;border-radius:6px;border:1px solid var(--line);box-shadow:0 12px 24px -18px rgba(40,20,60,.6)}
 .stages4.three{grid-template-columns:repeat(3,1fr)}
@@ -514,18 +521,6 @@ nav .mark{color:var(--plum)}
         </div>
       </div>
       <div class="process">
-        <h4>Process: the final-week email countdown</h4>
-        <p>How the six automated emails for the AI-adoption event were timed, from announcement to post-event.</p>
-        <div class="track">
-          <div><b>Four days out</b>Announcement</div>
-          <div><b>Three days out</b>Special guest spotlight</div>
-          <div><b>Two days out</b>Full lineup</div>
-          <div><b>One day out</b>Last chance</div>
-          <div class="hot"><b>Event morning</b>Day-of reminder</div>
-          <div><b>Event night</b>Post-event thank you</div>
-        </div>
-      </div>
-      <div class="process">
         <h4>Social media coverage</h4>
         <p>The LinkedIn and Instagram campaign I designed for The Real AI Adoption Curve: one announcement, then a steady run of sponsor, special guest and panelist spotlights to keep the event in people's feeds until the doors opened.</p>
         <div class="posts four">
@@ -587,7 +582,7 @@ nav .mark{color:var(--plum)}
 <section id="email">
   <div class="wrap">
     <h2>Email marketing</h2>
-    <p class="lede">How I fill those rooms, and drive sales for other clients, through email.</p>
+    <p class="lede">Every email I've built in one place: event campaigns for CQTA, product campaigns and automation for Blacbiblio, and the QScreen AI investor newsletter.</p>
 
     <!-- DEEP DIVE 2: EMAIL MARKETING -->
     <article class="deep">
@@ -611,7 +606,7 @@ nav .mark{color:var(--plum)}
           <li>Built event registration funnels and ticketing sequences for CQTA's quarterly events.</li>
           <li>Wrote and designed recurring newsletters for QScreen AI (The QAI Signal) and BLDC.</li>
         </ul>
-        <div class="result"><b>Result:</b> <span class="todo">Add Blacbiblio revenue or conversions, plus an open or click rate</span></div>
+        <div class="result"><b>Result:</b> a Blacbiblio campaign delivered to 10,659 contacts with a 37% open rate and 8,068 clicks, and CQTA events that sold out at 150 seats.</div>
       </div>
       <div class="process">
         <h4>Process: from prospect list to revenue</h4>
@@ -622,6 +617,34 @@ nav .mark{color:var(--plum)}
           <div><strong>Content</strong><span>Write and design each email</span></div>
           <div><strong>Distribution</strong><span>Automated sequences and newsletters</span></div>
           <div class="end"><strong>Conversion</strong><span>Tickets, sales and revenue</span></div>
+        </div>
+      </div>
+      <div class="process">
+        <h4>CQTA: the final-week email countdown</h4>
+        <p>How the six automated emails for the AI-adoption event were timed, from announcement to post-event.</p>
+        <div class="track">
+          <div><b>Four days out</b>Announcement</div>
+          <div><b>Three days out</b>Special guest spotlight</div>
+          <div><b>Two days out</b>Full lineup</div>
+          <div><b>One day out</b>Last chance</div>
+          <div class="hot"><b>Event morning</b>Day-of reminder</div>
+          <div><b>Event night</b>Post-event thank you</div>
+        </div>
+      </div>
+      <div class="process">
+        <h4>Blacbiblio: product campaigns and nurture automation</h4>
+        <p>Emails for an educational publisher promoting the ABC's of Canadian Black History Kit to teachers, with an automated nurture flow that follows up based on opens and clicks. Built and sent in Brevo.</p>
+        <div class="mock">
+          <a class="wide" href="images/blacbiblio-results.jpg" target="_blank" rel="noopener"><img src="images/blacbiblio-results.jpg" alt="Brevo campaign report for Blacbiblio on a tablet: 10,659 delivered, 3,944 opens, 37% open rate, 8,068 clicks" loading="lazy" width="1600" height="1066"><span>Campaign results</span></a>
+          <a href="images/blacbiblio-email-automation.jpg" target="_blank" rel="noopener"><img src="images/blacbiblio-email-automation.jpg" alt="Two tablets: the Representation Matters email and the Brevo nurture automation workflow with campaign stats" loading="lazy" width="1600" height="1066"><span>Email and automation flow</span></a>
+          <a href="images/blacbiblio-email.jpg" target="_blank" rel="noopener"><img src="images/blacbiblio-email.jpg" alt="Tablet showing the Inclusive Education: Representation Matters email by Dr Dorothy W. Williams" loading="lazy" width="1600" height="1066"><span>Inclusive Education email</span></a>
+        </div>
+      </div>
+      <div class="process">
+        <h4>QScreen AI: The QAI Signal investor newsletter, Issue 04</h4>
+        <p>Written, designed and sent through Brevo. Hover to scroll the full issue.</p>
+        <div class="emailshot nl">
+          <a class="frame" href="images/qscreen-newsletter.webp" target="_blank" rel="noopener" aria-label="Open the full QAI Signal newsletter"><img src="images/qscreen-newsletter.webp" alt="The QAI Signal Issue 04, October 2026: financing complete, debt settlement explained, and by-the-numbers section" loading="lazy" width="1100" height="5365"></a>
         </div>
       </div>
     </article>
@@ -653,7 +676,7 @@ nav .mark{color:var(--plum)}
         <ul>
           <li>Designed and built the company website.</li>
           <li>Design and run social media across LinkedIn, X and Instagram, including video content.</li>
-          <li>Design the investor newsletter, The QAI Signal.</li>
+          <li>Design the investor newsletter, The QAI Signal (shown in <a href="#email">Email marketing</a>).</li>
         </ul>
         <div class="result"><b>Result:</b> an investor newsletter averaging a 26% open rate across Issues 02 to 04 on the main shareholder list, and a consistent brand across web, social and email.</div>
       </div>
@@ -689,13 +712,6 @@ nav .mark{color:var(--plum)}
           <a href="images/qscreen-post-hardware.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-hardware.webp" alt="Post: AI screening shouldn't always require new hardware" loading="lazy" width="900" height="900"><span>Product benefit</span></a>
           <a href="images/qscreen-post-unit.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-unit.webp" alt="Post: What is a unit in a financing?" loading="lazy" width="900" height="900"><span>Capital Markets Explained</span></a>
           <a href="images/qscreen-post-debt.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-debt.webp" alt="Post: Shares for debt, explained" loading="lazy" width="900" height="900"><span>Capital Markets Explained</span></a>
-        </div>
-      </div>
-      <div class="process">
-        <h4>Investor newsletter: The QAI Signal, Issue 04</h4>
-        <p>Written, designed and sent through Brevo. Hover to scroll the full issue.</p>
-        <div class="emailshot nl">
-          <a class="frame" href="images/qscreen-newsletter.webp" target="_blank" rel="noopener" aria-label="Open the full QAI Signal newsletter"><img src="images/qscreen-newsletter.webp" alt="The QAI Signal Issue 04, October 2026: financing complete, debt settlement explained, and by-the-numbers section" loading="lazy" width="1100" height="5365"></a>
         </div>
       </div>
       <div class="process" id="almas">
