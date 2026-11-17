@@ -423,6 +423,217 @@ nav .mark{color:var(--plum)}
 
 /* Featured CQTA highlight */
 .feat{display:inline-block;background:var(--plum);color:#fff;font-family:var(--display);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin:0 0 12px}
+/* ===== v3 restructure ===== */
+[hidden]{display:none!important}
+.caps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px}
+.caps a{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fff;transition:border-color .2s,transform .2s}
+.caps a:hover{border-color:var(--plum);transform:translateY(-2px)}
+.caps b{display:block;font-family:var(--display);font-weight:600;font-size:1rem;margin-bottom:2px}
+.caps span{display:block;color:var(--muted);font-size:.85rem;line-height:1.4}
+.caps a:nth-child(1) b{color:var(--plum)} .caps a:nth-child(2) b{color:var(--rose)} .caps a:nth-child(3) b{color:var(--teal)} .caps a:nth-child(4) b{color:var(--indigo)} .caps a:nth-child(5) b{color:var(--gold)}
+@media (max-width:860px){.caps{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.caps{grid-template-columns:1fr}}
+.subhead{font-size:1.4rem;margin:44px 0 6px}
+.seealso{margin:14px 0 0;color:var(--muted);font-size:.92rem}
+.rtag{font-size:.76rem;font-weight:700;color:var(--rose);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+.muted{color:var(--muted)}
+/* CQTA runs */
+.runs-mega{display:grid;grid-template-columns:110px 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:14px;background:#fff}
+.rstub{display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:2px dashed var(--line);text-align:center;padding:10px 4px}
+.rstub b{font-family:var(--display);font-size:1.15rem;color:var(--plum);line-height:1.1}
+.runs-mega .rstub b{font-size:1.6rem;color:var(--rose)}
+.rstub span{color:var(--muted);font-size:.82rem;margin-top:4px}
+.rin{padding:20px 24px}
+.rin>p{margin:0 0 10px}
+.runs-mega h5,.run h5{font-family:var(--display);font-size:1.15rem;margin:0 0 4px;line-height:1.25}
+.rwhere{color:var(--muted);font-size:.92rem}
+.rfacts{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:0;font-size:.92rem}
+.rfacts dt{color:var(--muted)} .rfacts dd{margin:0}
+.runs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.run{display:grid;grid-template-columns:80px 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.run>div:last-child{padding:12px 14px;min-width:0}
+.run h5{font-size:1rem}
+.run p{margin:0;color:var(--muted);font-size:.88rem}
+.run p.who{color:var(--ink);margin-top:4px}
+@media (max-width:640px){.runs{grid-template-columns:1fr}.runs-mega{grid-template-columns:76px 1fr}.rin{padding:16px}.rfacts{grid-template-columns:1fr}.rfacts dt{margin-top:6px}}
+/* funnel */
+.funnel-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:36px;align-items:start}
+.funnel{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.funnel li{width:100%;display:flex;justify-content:center}
+.funnel button{width:var(--w);font:inherit;cursor:pointer;border:0;color:#fff;padding:16px 12px;text-align:center;clip-path:polygon(0 0,100% 0,96% 100%,4% 100%);transition:filter .2s,transform .2s}
+.funnel li:nth-child(1) button{background:var(--plum)} .funnel li:nth-child(2) button{background:var(--rose)} .funnel li:nth-child(3) button{background:var(--teal)} .funnel li:nth-child(4) button{background:var(--indigo)} .funnel li:nth-child(5) button{background:var(--gold)}
+.funnel button b{display:block;font-family:var(--display);font-size:1.1rem}
+.funnel button span{display:block;font-size:.82rem;opacity:.9}
+.funnel button[aria-selected="false"]{filter:saturate(.35) brightness(1.15)}
+.funnel button:hover{filter:none}
+.funnel button[aria-selected="true"]{transform:scale(1.03)}
+.fpanel{border-top:3px solid var(--plum);padding-top:18px}
+.fpanel h3{font-size:1.5rem;margin-bottom:6px}
+.fpanel>p{margin:0 0 12px}
+.fpanel ul{margin:0 0 14px;padding-left:20px}
+.fpanel li{margin-bottom:5px}
+.fproof{display:flex;align-items:baseline;gap:10px;border-top:1px solid var(--line);padding-top:12px}
+.fproof b{font-family:var(--display);font-size:1.8rem;color:var(--plum);line-height:1}
+.fproof span{color:var(--muted);font-size:.92rem}
+.beyond{margin-top:48px;border-top:1px solid var(--line);padding-top:28px}
+.beyond h3{font-size:1.3rem;margin-bottom:6px}
+.beyond>p{color:var(--muted);max-width:66ch;margin:0 0 18px}
+.strat{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.strat div{border-top:2px solid var(--line);padding-top:12px}
+.strat b{display:block;font-family:var(--display);font-size:1.02rem;margin-bottom:4px}
+.strat span{font-size:.94rem}
+@media (max-width:860px){.funnel-wrap{grid-template-columns:1fr}.strat{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.strat{grid-template-columns:1fr}}
+/* outreach automation */
+.auto{border:1px solid var(--line);border-radius:18px;padding:28px;background:#fff;margin-bottom:28px}
+.auto h3,.countdown h3,.singles h3,.print h3,.aiuse h3{font-size:1.3rem;margin-bottom:6px}
+.auto>p,.countdown>p,.singles>p,.print>p{color:var(--muted);margin:0 0 18px;max-width:66ch}
+.autoflow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:a}
+.autoflow li{position:relative;border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg);counter-increment:a;display:flex;flex-direction:column}
+.autoflow li::before{content:counter(a);font-family:var(--display);font-weight:600;color:var(--teal);font-size:.85rem}
+.autoflow li:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--teal);font-weight:700;background:#fff;line-height:1}
+.autoflow b{font-family:var(--display);font-size:1.02rem;margin:2px 0 4px}
+.autoflow span{font-size:.88rem;flex:1}
+.autoflow i{font-style:normal;font-size:.76rem;font-weight:700;color:var(--teal);margin-top:10px}
+.auto-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px;border-top:1px solid var(--line);padding-top:18px}
+.auto-stats b{display:block;font-family:var(--display);font-size:1.7rem;color:var(--teal);line-height:1.1}
+.auto-stats span{font-size:.88rem;color:var(--muted)}
+@media (max-width:860px){.autoflow{grid-template-columns:1fr}.autoflow li:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-14px;transform:translateX(-50%)}.auto-stats{grid-template-columns:1fr 1fr}}
+/* email slideshow */
+.mailshow{margin-bottom:28px}
+.mtabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.mtabs button,.btabs button{font:inherit;font-size:.9rem;padding:8px 14px;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.mtabs button[aria-selected="true"],.btabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.mtabs button.slot{border-style:dashed;color:var(--muted)}
+.mslide{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:32px;align-items:start}
+.mframe{display:block;height:560px;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:#F5F5F5;position:relative}
+.mframe img{display:block;width:100%;height:auto;transition:transform 0s}
+.mframe:hover img{transform:translateY(calc(-100% + 560px));transition:transform 12s linear}
+.mframe.flat{height:auto}
+.mframe.flat:hover img{transform:none}
+.mframe.empty{display:flex;align-items:center;justify-content:center;color:var(--muted);border-style:dashed;background:#fff;height:360px}
+.mtext h4{font-family:var(--display);font-size:1.4rem;margin:0 0 8px;line-height:1.2}
+.mtext ul{padding-left:20px;margin:10px 0}
+.hint{color:var(--muted);font-size:.85rem}
+.minis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.minis img{width:100%;height:auto;border-radius:8px;display:block}
+@media (max-width:760px){.mslide{grid-template-columns:1fr}.mframe{height:420px}.mframe:hover img{transform:translateY(calc(-100% + 420px))}}
+@media (prefers-reduced-motion:reduce){.mframe:hover img{transform:none}}
+.countdown{border-top:1px solid var(--line);padding-top:26px}
+/* social */
+.growth2{display:grid;grid-template-columns:1fr 1.2fr;gap:32px;align-items:center;border:1px solid var(--line);border-radius:18px;padding:26px;background:#fff;margin-bottom:28px}
+.growth2 h3{font-size:1.5rem;margin-bottom:6px;color:var(--teal)}
+.growth2 p.muted{margin:0}
+.gnums{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gnums b{display:block;font-family:var(--display);font-size:1.6rem;line-height:1.1}
+.gnums div:nth-child(1) b{color:var(--indigo)} .gnums div:nth-child(2) b{color:var(--rose)} .gnums div:nth-child(3) b{color:var(--plum)} .gnums div:nth-child(4) b{color:var(--teal)}
+.gnums span{font-size:.85rem;color:var(--muted)}
+.carousels{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:28px}
+.cbox{margin:0}
+.cbox .carousel{max-width:none}
+.cbox figcaption{margin-top:10px;font-size:.93rem;color:var(--muted)}
+.cbox figcaption b{display:block;color:var(--ink);font-family:var(--display);font-size:1.05rem}
+.singles{border-top:1px solid var(--line);padding-top:26px;margin-bottom:28px}
+.adslot{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:28px;align-items:center;border:1px dashed var(--line);border-radius:16px;padding:20px}
+.adph{aspect-ratio:1;border-radius:10px;background:#F4F3F6;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:.9rem;padding:16px}
+.adslot h3{font-size:1.25rem;margin-bottom:6px}
+@media (max-width:760px){.growth2,.carousels,.adslot{grid-template-columns:1fr}.gnums{grid-template-columns:1fr 1fr}}
+/* browser showcase */
+.btabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.bwin{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -45px rgba(20,18,24,.4)}
+.bbar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);background:#F7F6F9}
+.bbar i{width:10px;height:10px;border-radius:50%;background:#DDD8E4}
+.burl{margin-left:10px;font-size:.82rem;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px 12px}
+.bview{max-height:560px;overflow-y:auto}
+.bview img{display:block;width:100%;height:auto}
+.bcopy{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;margin-top:22px}
+.bcopy h3{font-size:1.4rem;margin-bottom:6px}
+.bcopy p{margin:0}
+.print{border-top:1px solid var(--line);margin-top:34px;padding-top:26px}
+.posts.six{grid-template-columns:repeat(6,1fr)}
+.posts.six img{aspect-ratio:1000/1294;object-fit:cover}
+@media (max-width:860px){.bcopy{grid-template-columns:1fr}.posts.six{grid-template-columns:repeat(3,1fr)}}
+/* toolkit */
+.kit{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.kit h3{font-size:1.05rem;margin-bottom:8px;font-weight:600}
+.kit div:nth-child(1) h3{color:var(--plum)} .kit div:nth-child(2) h3{color:var(--teal)} .kit div:nth-child(3) h3{color:var(--rose)} .kit div:nth-child(4) h3{color:var(--indigo)} .kit div:nth-child(5) h3{color:var(--gold)}
+.kit ul{margin:0;padding-left:18px;font-size:.96rem}
+.kit li{margin-bottom:4px}
+.aiuse{margin-top:30px;border-top:1px solid var(--line);padding-top:22px}
+.aiuse p{max-width:70ch;margin:0}
+#toolkit h2{color:var(--plum)} #funnel h2{color:var(--rose)} #email h2{color:var(--teal)} #social h2{color:var(--indigo)} #design h2{color:var(--gold)}
+@media (max-width:960px){.kit{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.kit{grid-template-columns:1fr 1fr}}
+
+
+/* v3 additions */
+.carousels.three{grid-template-columns:repeat(3,1fr)}
+.runs-mega{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:24px;border:1px solid var(--line);border-left:4px solid var(--plum);border-radius:16px;margin-bottom:18px;background:#fff}
+.runs-mega .rin h5{font-size:1.35rem;margin:2px 0 6px;font-family:'Bricolage Grotesque',sans-serif}
+.rwhere{color:var(--muted);margin:0 0 10px;font-size:.95rem}
+.rfacts{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:14px 0;font-size:.95rem}
+.rfacts dt{font-weight:700;color:var(--plum)}.rfacts dd{margin:0}
+.rstats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.rstats div{border-top:2px solid var(--rose);padding-top:8px}
+.rstats b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.6rem;color:var(--rose)}
+.rstats span{font-size:.85rem;color:var(--muted)}
+.rmedia{grid-column:1/-1;display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:150px;gap:10px;margin-top:6px}
+.rmedia .rvid{grid-row:span 2;margin:0;border-radius:12px;overflow:hidden;background:#000}
+.rmedia .rvid video{width:100%;height:100%;object-fit:cover;display:block}
+.rmedia a{display:block;border-radius:12px;overflow:hidden}
+.rmedia img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.rmedia a:hover img{transform:scale(1.04)}
+.run .who{color:var(--muted);font-size:.9rem;margin-top:6px}
+.history{list-style:none;padding:0;margin:0 0 28px;display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-top:2px solid var(--teal)}
+.history li{padding:12px 14px 0 0;position:relative}
+.history li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--teal)}
+.history b{display:block;color:var(--teal);font-size:.95rem}.history span{font-size:.88rem;color:var(--muted)}
+.evphotos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.evphotos a{display:block;border-radius:10px;overflow:hidden;aspect-ratio:1}
+.evphotos img{width:100%;height:100%;object-fit:cover;display:block}
+.suite{margin-top:26px;padding:22px;border:1px solid var(--line);border-radius:16px}
+.suite h3{font-size:1.2rem;margin-bottom:12px}
+.suite-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.suite-cols b{color:var(--indigo)}.suite-cols ul{margin:8px 0 0;padding-left:18px}
+.promos{margin:10px 0 34px}
+.promos h3{font-size:1.3rem;margin-bottom:6px}.promos>p{color:var(--muted);margin:0 0 18px}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pgrid figure{margin:0}
+.pv{aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000}
+.pv video{width:100%;height:100%;object-fit:cover;display:block}
+.pgrid figcaption{font-size:.88rem;color:var(--muted);margin-top:8px}.pgrid figcaption b{display:block;color:var(--ink)}
+.adres{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;padding:26px;border:1px solid var(--line);border-left:4px solid var(--indigo);border-radius:16px;margin-top:30px}
+.adres h3{font-size:1.3rem;margin:4px 0 8px}
+.adnums{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.adnums b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;color:var(--indigo)}
+.adnums span{font-size:.85rem;color:var(--muted)}
+.edu{list-style:none;padding:0;margin:0 0 24px}
+.edu li{padding:10px 0;border-bottom:1px solid var(--line)}
+.edu b{display:block}.edu span{color:var(--muted);font-size:.92rem}
+@media (max-width:900px){.carousels.three{grid-template-columns:1fr 1fr}.pgrid{grid-template-columns:1fr 1fr}.history{grid-template-columns:1fr 1fr;row-gap:18px}.rstats{grid-template-columns:1fr 1fr}.adres{grid-template-columns:1fr}}
+@media (max-width:600px){.carousels.three,.suite-cols{grid-template-columns:1fr}.runs-mega{grid-template-columns:1fr}.rmedia{grid-template-columns:1fr 1fr;grid-auto-rows:120px}.rmedia .rvid{grid-column:1/-1;grid-row:auto;height:220px}.adnums{grid-template-columns:1fr 1fr}.rfacts{grid-template-columns:1fr}}
+.case.wide{grid-column:1/-1;display:grid;grid-template-columns:1.1fr 1fr}
+.case.wide .banner{border-bottom:0;border-radius:0}.case.wide .banner img{height:100%;aspect-ratio:auto}
+.evphotos.two{grid-template-columns:1fr 1fr}
+.case.wide .in{padding:26px 28px!important}
+@media (max-width:760px){.case.wide{grid-template-columns:1fr}.case.wide .banner img{aspect-ratio:4/3}}
+.evstats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 30px}.evstats div{border-top:2px solid var(--teal);padding-top:8px}.evstats b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.5rem;color:var(--teal)}.evstats span{font-size:.86rem;color:var(--muted)}@media (max-width:760px){.evstats{grid-template-columns:1fr 1fr}}
+.evmedia{display:grid;grid-template-columns:1fr 1.3fr;gap:10px;margin:12px 0}
+.evmedia .pv{aspect-ratio:9/16}
+.evphotos.stack{grid-template-columns:1fr;grid-template-rows:repeat(3,1fr);margin:0}.evphotos.stack a{aspect-ratio:auto;position:relative;min-height:0}.evphotos.stack img{position:absolute;inset:0}
+.adnums{align-content:start}
+.adres.ev{border-left-color:var(--teal);margin-top:18px}.adres.ev .adnums b{color:var(--teal)}
+.adtbl{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:10px}
+.adtbl th,.adtbl td{text-align:left;padding:6px 6px;border-bottom:1px solid var(--line)}
+.adtbl th{color:var(--muted);font-weight:600;font-size:.78rem}
+@media (max-width:900px){.history{grid-template-columns:repeat(3,1fr)!important}}
+@media (max-width:600px){.adtbl{font-size:.78rem}.adtbl th,.adtbl td{padding:5px 3px}}
+.facts .live a{font-weight:700;color:var(--plum);margin-right:14px}
+.vimeo{margin:40px 0 34px}.vimeo h3{font-size:1.3rem;margin-bottom:6px}.vimeo>p{color:var(--muted);margin:0 0 18px}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.vgrid figure{margin:0}
+.vm{aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#111}.vm iframe{width:100%;height:100%;border:0;display:block}
+.vgrid figcaption{font-size:.88rem;color:var(--muted);margin-top:8px}.vgrid figcaption b{display:block;color:var(--ink)}
+@media (max-width:640px){.vgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -431,12 +642,12 @@ nav .mark{color:var(--plum)}
     <a class="mark" href="#top">Sashya Paudel</a>
     <ul>
       <li><a href="#events">Events</a></li>
+      <li><a href="#funnel">Funnel</a></li>
       <li><a href="#email">Email</a></li>
+      <li><a href="#social">Social</a></li>
       <li><a href="#design">Design</a></li>
-      <li><a href="#ai">AI</a></li>
-      <li><a href="#system">How I work</a></li>
+      <li><a href="#toolkit">Toolkit</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Tools</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -450,7 +661,7 @@ nav .mark{color:var(--plum)}
       <p class="sub">I plan and market corporate and industry events end to end, from event pages and ticketing to email automation and social media, with a background in multimedia design and web development.</p>
       <div class="btns">
         <a class="btn primary" href="Sashya_Paudel_CV_Event_Marketing.pdf" download>Download CV</a>
-        <a class="btn ghost" href="#events">See my events</a>
+        <a class="btn ghost" href="#events">See my work</a>
       </div>
     </div>
     <div class="ticket" id="ticket" aria-label="Example event: 150 of 150 seats sold">
@@ -469,19 +680,26 @@ nav .mark{color:var(--plum)}
 <section id="impact" style="padding-top:0;border-top:0">
   <div class="wrap">
     <div class="stats">
-      <div class="stat"><b data-count="12" data-suffix="+">12+</b><span>events planned and marketed in two years</span></div>
+      <div class="stat"><b data-count="15" data-suffix="+">15+</b><span>events marketed and run since July 2024</span></div>
       <div class="stat"><b>Sold out</b><span>events at 150-person capacity</span></div>
       <div class="stat"><b data-count="1596">1,596</b><span>LinkedIn followers, up from 300 in one year</span></div>
       <div class="stat"><b data-count="147709">147,709</b><span>organic LinkedIn impressions, zero paid spend</span></div>
     </div>
     <p class="trust">Events I've marketed featured speakers and sponsors from <span>TD</span><span>BMO</span><span>Accenture</span><span>Thomson Reuters</span><span>Tricentis</span><span>Parasoft</span><span>Perforce</span><span>TTC Global</span><span>City of Brampton</span></p>
+    <div class="caps" aria-label="What I do">
+      <a href="#events"><b>Events</b><span>Planning, Eventbrite and Luma, sponsors and speakers</span></a>
+      <a href="#funnel"><b>Funnels and ads</b><span>Multi-layer campaigns that sell tickets</span></a>
+      <a href="#email"><b>Email and automation</b><span>Outreach systems, sequences, newsletters</span></a>
+      <a href="#social"><b>Social media</b><span>Campaigns, carousels, organic growth</span></a>
+      <a href="#design"><b>Design, web and video</b><span>Websites, graphics, print, video</span></a>
+    </div>
   </div>
 </section>
 
 <section id="events">
   <div class="wrap">
     <h2>Events</h2>
-    <p class="lede">The events I plan and market, starting with my main client, CQTA, followed by the networking events and mixers I've run across Toronto.</p>
+    <p class="lede">Industry conferences, panels and networking events I've planned and marketed in Toronto, starting with my main client, CQTA.</p>
 
     <!-- DEEP DIVE 1: CQTA -->
     <article class="deep">
@@ -493,7 +711,7 @@ nav .mark{color:var(--plum)}
         <figcaption>CQTA panel event, Mississauga, October 2026</figcaption>
       </div>
       <div class="in">
-        <span class="feat">Featured event · Sold out at 150 seats</span>
+        <span class="feat">Featured client · Sold out at 150 seats</span>
         <h3>Quarterly industry events for CQTA</h3>
         <p class="where">Canadian Quality &amp; Testing Association, Toronto, 2025 to present</p>
         <p class="challenge"><b>The challenge</b>Fill a 150-seat room every quarter with a niche professional audience, and grow that audience organically.</p>
@@ -504,51 +722,96 @@ nav .mark{color:var(--plum)}
         </dl>
         <h4>What I did</h4>
         <ul>
-          <li>Ran marketing for every quarterly event: event pages, ticketing, social media, newsletters and outreach.</li>
-          <li>Coordinated sponsors TTC Global, Parasoft, Perforce and Tricentis for the Summer Mega Event at TELUS Harbour.</li>
+          <li>Run marketing for every quarterly event: event pages, ticketing, social media, email campaigns and outreach.</li>
+          <li>Led all marketing and communications for the Summer Mega Event at TELUS Harbour: 110 tickets sold, 32 designed posts, a LinkedIn ad campaign and the full email suite.</li>
           <li>Marketed an AI-adoption panel with speakers from TD, BMO, Accenture, Thomson Reuters and the City of Brampton.</li>
-          <li>Built a repeatable playbook so each new event launches from a tested structure.</li>
+          <li>Built a repeatable playbook, so each new event launches from a tested structure.</li>
         </ul>
         <div class="result"><b>Result:</b> sold-out events at 150-person capacity, and LinkedIn growth from 300 to 1,596 followers in one year with no paid spend.</div>
       </div>
 
       <div class="process">
+        <h4>Every CQTA event I've worked on</h4>
+        <p>Five events, newest first. The Summer Mega Event was CQTA's flagship of the year.</p>
+        <article class="runs-mega">
+          <div class="rstub"><b>Jun 29</b><span>2026</span></div>
+          <div class="rin">
+            <p class="rtag">Flagship · Summer Mega Event</p>
+            <h5>AI in Canadian TestOps and DevOps: What's real, what's not?</h5>
+            <p class="rwhere">TELUS Harbour, 25 York St, Toronto · 11 AM to 7 PM, then an after-hours reception</p>
+            <p>A full-day program: a quality engineering hackathon, B2B mentorship sessions, two keynotes, a leadership panel and prize distribution.</p>
+            <dl class="rfacts">
+              <dt>Guest of honour</dt><dd>Hesham Fahmy, EVP, COO and CIO, TELUS</dd>
+              <dt>Keynotes</dt><dd>Arpita Bhattacharya, Canada Life · Pallab Datta, TCS</dd>
+              <dt>Panel</dt><dd>TELUS, Canada Life, Sun Life, NiyaSoft</dd>
+              <dt>Judges and mentors</dt><dd>Leaders from BMO, TELUS, CIBC, TD, Accenture, Moneris and Digy4</dd>
+              <dt>Sponsors</dt><dd>TELUS, Tricentis, Parasoft, Perforce, TTC Global</dd>
+            </dl>
+            <div class="rstats">
+              <div><b>110</b><span>tickets sold on Eventbrite</span></div>
+              <div><b>32</b><span>campaign posts designed</span></div>
+              <div><b>23,374</b><span>paid LinkedIn impressions</span></div>
+              <div><b>44,914</b><span>organic impressions during the campaign</span></div>
+            </div>
+          </div>
+          <div class="rmedia">
+            <figure class="rvid"><video src="videos/cqta-summer-mega.mp4" poster="images/cqta-summer-mega-poster.jpg" controls playsinline preload="metadata" aria-label="Video from the CQTA Summer Mega Event"></video></figure>
+            <a href="images/summer-group.jpg" target="_blank" rel="noopener"><img src="images/summer-group.jpg" alt="Group photo of attendees, speakers and sponsors at the CQTA Summer Mega Event, TELUS Harbour" loading="lazy" width="1600" height="1067"></a>
+            <a href="images/summer-panel.jpg" target="_blank" rel="noopener"><img src="images/summer-panel.jpg" alt="Leadership panel on stage at the Summer Mega Event" loading="lazy" width="1200" height="679"></a>
+            <a href="images/summer-hackathon.jpg" target="_blank" rel="noopener"><img src="images/summer-hackathon.jpg" alt="Hackathon teams working at the Summer Mega Event" loading="lazy" width="1000" height="663"></a>
+            <a href="images/summer-booth-perforce.jpg" target="_blank" rel="noopener"><img src="images/summer-booth-perforce.jpg" alt="Perforce sponsor booth at the Summer Mega Event" loading="lazy" width="1000" height="704"></a>
+          </div>
+        </article>
+        <div class="runs">
+          <div class="run"><div class="rstub"><b>Oct 1</b><span>2026</span></div><div><h5>The Real AI Adoption Curve: Wins, Failures, Costs and Lessons Learned</h5><p>C Banquets, Mississauga · 1 to 5 PM</p><p class="who">Speakers from Digy4, TD and TTC Global; MC from Accenture; panelists from Accenture, BMO, TTC Global and Thomson Reuters; special guest the CIO of the City of Brampton. Gold sponsor Invest Mississauga.</p></div></div>
+          <div class="run"><div class="rstub"><b>Mar 12</b><span>2026</span></div><div><h5>Governance Model for Scaled QA Automation</h5><p>C Banquets, Mississauga · 4 to 7 PM</p><p class="who">Sponsors: Invest Mississauga and Parasoft.</p></div></div>
+          <div class="run"><div class="rstub"><b>Nov 12</b><span>2025</span></div><div><h5>Next-Gen Assurance: Agentic Intelligence in Quality Engineering</h5><p>OneEleven, 325 Front St W, Toronto · 4 to 7 PM</p></div></div>
+          <div class="run"><div class="rstub"><b>Jun 4</b><span>2025</span></div><div><h5>Revolutionizing Software Quality: AI, Shift Left and DevOps</h5><p>OneEleven, 325 Front St W, Toronto</p></div></div>
+        </div>
+      </div>
+
+      <div class="process">
         <h4>Watch</h4>
-        <p>Promotional and testimonial videos from CQTA events.</p>
+        <p>Promotional and networking videos from CQTA events.</p>
         <div class="videos tall">
-          <!-- To add a video: replace the vbox content with a YouTube embed, e.g.
-               <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="CQTA promo video" allowfullscreen loading="lazy"></iframe>
-               or a small file: <video src="videos/cqta-promo.mp4" controls preload="metadata" poster="images/cqta-panel.webp"></video> -->
           <figure><div class="vbox"><video src="videos/cqta-highlights.mp4" poster="images/cqta-highlights-poster.jpg" controls playsinline preload="metadata" aria-label="CQTA event highlights video"></video></div><figcaption>Event highlights</figcaption></figure>
           <figure><div class="vbox"><video src="videos/cqta-networking.mp4#t=0.1" controls playsinline preload="metadata" aria-label="CQTA networking video"></video></div><figcaption>Networking at CQTA</figcaption></figure>
         </div>
-      </div>
-      <div class="process">
-        <h4>Social media coverage</h4>
-        <p>The LinkedIn and Instagram campaign I designed for The Real AI Adoption Curve: one announcement, then a steady run of sponsor, special guest and panelist spotlights to keep the event in people's feeds until the doors opened.</p>
-        <div class="posts four">
-          <a href="images/cqta-post-event-promo.jpg" target="_blank" rel="noopener"><img src="images/cqta-post-event-promo.jpg" alt="Event announcement post for The Real AI Adoption Curve, October 1, C Banquets Mississauga, with speaker photos and sponsor logos" loading="lazy" width="900" height="900"><span>Event announcement</span></a>
-          <a href="images/cqta-post-gold-sponsor.jpg" target="_blank" rel="noopener"><img src="images/cqta-post-gold-sponsor.jpg" alt="Meet our Gold Sponsor post announcing Invest Mississauga" loading="lazy" width="900" height="900"><span>Gold sponsor</span></a>
-          <a href="images/cqta-post-special-guest.jpg" target="_blank" rel="noopener"><img src="images/cqta-post-special-guest.jpg" alt="Meet our Special Guest post for Medhanie Tekeste, CIO of the City of Brampton" loading="lazy" width="900" height="900"><span>Special guest</span></a>
-          <a href="images/cqta-post-panelist-noel.jpg" target="_blank" rel="noopener"><img src="images/cqta-post-panelist-noel.jpg" alt="Meet our Panelist post for Noel Sinnou, Director at Accenture" loading="lazy" width="900" height="900"><span>Panelist spotlight</span></a>
-          <a href="images/cqta-post-panelist-angela.jpg" target="_blank" rel="noopener"><img src="images/cqta-post-panelist-angela.jpg" alt="Meet our Panelist post for Angela Reid, Global Vice President at Thomson Reuters" loading="lazy" width="900" height="900"><span>Panelist spotlight</span></a>
-          <a href="images/cqta-post-panelist-karthikeyan.jpg" target="_blank" rel="noopener"><img src="images/cqta-post-panelist-karthikeyan.jpg" alt="Meet our Panelist post for Karthikeyan C Ganesa, Director of Quality Engineering at BMO" loading="lazy" width="900" height="900"><span>Panelist spotlight</span></a>
-          <a href="images/cqta-post-panelist-nisse.jpg" target="_blank" rel="noopener"><img src="images/cqta-post-panelist-nisse.jpg" alt="Meet our Panelist post for Nisse Vaya, Account Director at TTC Global" loading="lazy" width="900" height="900"><span>Panelist spotlight</span></a>
-          <a href="images/cqta-post-after-hours-sponsor.jpg" target="_blank" rel="noopener"><img src="images/cqta-post-after-hours-sponsor.jpg" alt="Meet our After Hour Sponsor post thanking Tricentis" loading="lazy" width="900" height="900"><span>After-hours sponsor</span></a>
-        </div>
+        <p class="seealso">The social campaign and emails for these events are in <a href="#social">Social media</a> and <a href="#email">Email and outreach</a>.</p>
       </div>
     </article>
 
-    <h3 style="font-size:1.4rem;margin:40px 0 6px">More events I've organized</h3>
-    <p class="lede" style="margin-bottom:18px">Networking events and mixers I planned and marketed in Toronto.</p>
+    <h3 class="subhead">More events I've marketed and run</h3>
+    <p class="lede" style="margin-bottom:18px">Networking events and mixers in Toronto, delivered through BL Digital and Creatives. On each one I handled marketing and the digital side end to end, from promotion and ticketing to working with venue managers, booking dates and hosting on the night.</p>
+    <div class="evstats"><div><b>80 to 100+</b><span>registrations per event</span></div><div><b>120 to 130</b><span>guests at the AI, Tech and Startups mixer</span></div><div><b>80 to 90</b><span>guests at AI in Real Estate</span></div><div><b>70 to 80</b><span>guests at each Big Business mixer</span></div></div>
+    <ol class="history" aria-label="Event history">
+      <li><b>Jul 25, 2024</b><span>Startup, Tech, Investor and Entrepreneurs Networking Extravaganza, my first event</span></li>
+      <li><b>Nov 30, 2024</b><span>Big Business Networking Mixer launches at Lavelle, the first of four</span></li>
+      <li><b>Mar 27, 2025</b><span>Lejeune Institute launch event</span></li>
+      <li><b>Apr 23, 2026</b><span>AI, Tech and Startups mixer at Parc Ave</span></li>
+      <li><b>May 28, 2026</b><span>AI, Tech and Startups Toronto Networking Mixer, a Toronto Tech Week collaboration</span></li>
+      <li><b>Oct 8, 2026</b><span>AI in Real Estate, Construction and Trade Mixer</span></li>
+    </ol>
     <div class="work">
+      <article class="case wide" data-tags="events">
+        <a class="banner" href="images/jul24-group.jpg" target="_blank" rel="noopener"><img src="images/jul24-group.jpg" alt="Group photo of attendees at the Startup, Tech, Investor and Entrepreneurs Networking Extravaganza, July 25, 2024" loading="lazy" width="1024" height="768"></a>
+        <div class="in">
+          <p class="rtag">Where it started</p>
+          <h3>Startup, Tech, Investor and Entrepreneurs Networking Extravaganza</h3>
+          <p class="where">Rooftop venue, Toronto, July 25, 2024</p>
+          <p>My first event: a summer rooftop mixer that brought founders, tech professionals and investors together. I ran the promotion and ticketing and helped host on the night. It set up the format for every BLDC mixer after it.</p>
+          <div class="evphotos two"><a href="images/jul24-crowd.jpg" target="_blank" rel="noopener"><img src="images/jul24-crowd.jpg" alt="Guests networking at the bar during the July 2024 event" loading="lazy" width="1024" height="768"></a><a href="images/jul24-rooftop.jpg" target="_blank" rel="noopener"><img src="images/jul24-rooftop.jpg" alt="Rooftop crowd at the July 2024 event" loading="lazy" width="1024" height="768"></a></div>
+          <div class="chips"><span>First event</span><span>Promotion</span><span>Ticketing</span><span>Hosting</span></div>
+        </div>
+      </article>
       <article class="case" data-tags="events">
         <a class="banner" href="images/event-big-business.jpg" target="_blank" rel="noopener"><img src="images/event-big-business.jpg" alt="Event banner: Big Business, Entrepreneurs, Startups and Investors Networking Event, Thursday February 26, 2026, 624 King St W, Toronto" loading="lazy" width="1400" height="787"></a>
         <div class="in">
-          <h3>Big Business Events series</h3>
-          <p class="where">Toronto <span class="todo">Add years</span></p>
-          <p>A networking series of four to five events. The first one sold out. <span class="todo">Add attendance</span></p>
-          <div class="chips"><span>Event series</span><span>Ticketing</span><span>Promotion</span></div>
+          <h3>Big Business Networking Mixer series</h3>
+          <p class="where">Toronto · four events, November 2024 to February 2026 · Lavelle and King Street West</p>
+          <p>A networking series for founders, startups, business owners and investors, drawing 70 to 80 guests each time. The first event sold out. I designed the brand and social campaign, ran ticketing and promotion, and worked with each venue on dates and setup.</p>
+          <div class="evphotos"><a href="images/bb1-lavelle.jpg" target="_blank" rel="noopener"><img src="images/bb1-lavelle.jpg" alt="Guests at the first Big Business mixer at Lavelle, November 30, 2024" loading="lazy" width="768" height="1024"></a><a href="images/bb1-networking.jpg" target="_blank" rel="noopener"><img src="images/bb1-networking.jpg" alt="Guests networking in front of the Lavelle screen" loading="lazy" width="768" height="1024"></a><a href="images/bb-jun25-speaker.jpg" target="_blank" rel="noopener"><img src="images/bb-jun25-speaker.jpg" alt="Speaker addressing the room at the June 10, 2025 Big Business mixer" loading="lazy" width="768" height="1024"></a></div>
+          <div class="chips"><span>Event series</span><span>Branding</span><span>Ticketing</span><span>Hosting</span></div>
         </div>
       </article>
       <article class="case" data-tags="events">
@@ -556,17 +819,19 @@ nav .mark{color:var(--plum)}
         <div class="in">
           <h3>AI in Real Estate, Construction and Trade Mixer</h3>
           <p class="where">Soluna, Toronto, October 8, 2026</p>
-          <p>Planned and promoted a networking mixer, including a promotional video.</p>
-          <div class="chips"><span>Event planning</span><span>Promotion</span><span>Video</span></div>
+          <p>A mixer for founders, tech leaders and investors in real estate, construction and the trades, with 80 to 90 guests. I ran the marketing and digital execution, including two promo videos (see <a href="#promos">promo videos</a>) and the highlight reel below.</p>
+          <div class="evmedia"><div class="pv"><video src="videos/ai-real-estate-highlights.mp4" poster="images/ai-real-estate-highlights-poster.jpg" controls playsinline preload="none" aria-label="Highlight reel from the AI in Real Estate mixer"></video></div><div class="evphotos stack"><a href="images/re-group.jpg" target="_blank" rel="noopener"><img src="images/re-group.jpg" alt="Group of attendees at Soluna" loading="lazy" width="1400" height="1050"></a><a href="images/re-group3.jpg" target="_blank" rel="noopener"><img src="images/re-group3.jpg" alt="Sashya with attendees at Soluna" loading="lazy" width="1400" height="1050"></a><a href="images/re-group2.jpg" target="_blank" rel="noopener"><img src="images/re-group2.jpg" alt="Attendees at the Soluna bar" loading="lazy" width="1400" height="1050"></a></div></div>
+          <div class="chips"><span>Promotion</span><span>Video</span><span>Venue coordination</span></div>
         </div>
       </article>
       <article class="case" data-tags="events">
         <a class="banner" href="images/event-ai-tech-startups.jpg" target="_blank" rel="noopener"><img src="images/event-ai-tech-startups.jpg" alt="Event banner: AI, Tech and Startups Toronto networking mixer for professionals, Thursday May 28, 2026, Soluna Toronto" loading="lazy" width="1400" height="787"></a>
         <div class="in">
-          <h3>AI Professionals Mixer</h3>
-          <p class="where">Soluna, Toronto, May 28, 2026</p>
-          <p>A networking mixer for AI professionals. <span class="todo">Add your role and attendance</span></p>
-          <div class="chips"><span>Networking</span><span>Promotion</span></div>
+          <h3>AI, Tech and Startups Toronto Networking Mixer</h3>
+          <p class="where">Soluna, Toronto, May 28, 2026 · 6 to 10 PM · Toronto Tech Week</p>
+          <p>An evening mixer for AI professionals, founders and tech leaders, run as one of the biggest community collaborations of Toronto Tech Week, with 120 to 130 guests. I handled promotion, ticketing, the venue booking and hosting.</p>
+          <div class="evphotos"><a href="images/soluna-crowd.jpg" target="_blank" rel="noopener"><img src="images/soluna-crowd.jpg" alt="A full room at Soluna during the AI, Tech and Startups mixer" loading="lazy" width="768" height="1024"></a><a href="images/soluna-group2.jpg" target="_blank" rel="noopener"><img src="images/soluna-group2.jpg" alt="Guests gathered under the arched windows at Soluna" loading="lazy" width="1024" height="768"></a><a href="images/soluna-floor.jpg" target="_blank" rel="noopener"><img src="images/soluna-floor.jpg" alt="Guests networking at the bar at Soluna" loading="lazy" width="768" height="1024"></a></div>
+          <div class="chips"><span>Networking</span><span>Promotion</span><span>Hosting</span></div>
         </div>
       </article>
       <article class="case" data-tags="events">
@@ -574,7 +839,8 @@ nav .mark{color:var(--plum)}
         <div class="in">
           <h3>Launch Event: Lejeune Institute of Canadian Black History Education</h3>
           <p class="where">Toronto, March 27, 2025</p>
-          <p>A Black Founders and Entrepreneurs Networking Event to launch the institute, uniting founders, entrepreneurs, educators, changemakers and investors. <span class="todo">Add your role and attendance</span></p>
+          <p>A Black Founders and Entrepreneurs Networking Event to launch the institute, uniting founders, entrepreneurs, educators, changemakers and investors. I ran the marketing, event promo video and digital execution.</p>
+          <div class="evphotos"><a href="images/lejeune-group.jpg" target="_blank" rel="noopener"><img src="images/lejeune-group.jpg" alt="Group photo at the Lejeune Institute launch event" loading="lazy" width="1000" height="750"></a><a href="images/lejeune-speaker.jpg" target="_blank" rel="noopener"><img src="images/lejeune-speaker.jpg" alt="Speaker addressing guests at the Lejeune launch" loading="lazy" width="600" height="800"></a><a href="images/lejeune-room.jpg" target="_blank" rel="noopener"><img src="images/lejeune-room.jpg" alt="Guests at tables during the Lejeune launch" loading="lazy" width="600" height="800"></a></div>
           <div class="chips"><span>Launch event</span><span>Networking</span><span>Community</span></div>
         </div>
       </article>
@@ -582,118 +848,148 @@ nav .mark{color:var(--plum)}
   </div>
 </section>
 
-<section id="email">
+<section id="funnel">
   <div class="wrap">
-    <h2>Email marketing</h2>
-    <p class="lede">Every email I've built in one place: event campaigns for CQTA, product campaigns and automation for Blacbiblio, and the QScreen AI investor newsletter.</p>
-
-    <!-- DEEP DIVE 2: EMAIL MARKETING -->
-    <article class="deep">
-      <a class="mail" href="images/email-cqta-special-guest.webp" target="_blank" rel="noopener" aria-label="Open the full CQTA special guest email">
-        <span class="frame"><img src="images/email-cqta-special-guest.webp" alt="CQTA special guest announcement email: The CIO of Brampton is coming. Are you? With speaker card, lineup and Secure My Seat button" loading="lazy" width="659" height="2000"></span>
-        <span class="stubtag"><span>CQTA special guest email</span><b>Oct 2026</b></span>
-      </a>
-      <div class="in">
-        <h3>Email marketing that fills rooms and drives sales</h3>
-        <p class="where">CQTA, Blacbiblio, QScreen AI and BLDC, 2024 to present</p>
-        <p class="challenge"><b>The challenge</b>Turn cold contact lists into event registrations, customers and engaged subscribers.</p>
-        <dl class="facts">
-          <dt>My role</dt><dd>Database, content, automation and reporting</dd>
-          <dt>Tools</dt><dd>LinkedIn Sales Navigator, Brevo, Klaviyo, Mailchimp</dd>
-          <dt>Scale</dt><dd>25,000+ contact database</dd>
-        </dl>
-        <h4>What I did</h4>
-        <ul>
-          <li>Built targeted contact databases using LinkedIn Sales Navigator, then validated and segmented them before any send.</li>
-          <li>Ran product campaigns for Blacbiblio, an educational publisher, that turned email into conversions and revenue.</li>
-          <li>Built event registration funnels and ticketing sequences for CQTA's quarterly events.</li>
-          <li>Wrote and designed recurring newsletters for QScreen AI (The QAI Signal) and BLDC.</li>
-        </ul>
-        <div class="result"><b>Result:</b> a Blacbiblio campaign delivered to 10,659 contacts with a 37% open rate and 8,068 clicks, and CQTA events that sold out at 150 seats.</div>
+    <h2>How I fill a room</h2>
+    <p class="lede">Every event runs through the same multi-layer funnel. Each layer hands people to the next, from first impression to ticket to the next event. Pick a layer to see what happens in it.</p>
+    <div class="funnel-wrap">
+      <ol class="funnel" role="tablist" aria-label="Event marketing funnel">
+        <li><button type="button" role="tab" aria-selected="true" data-i="0" style="--w:100%"><b>Reach</b><span>Paid and organic social</span></button></li>
+        <li><button type="button" role="tab" aria-selected="false" data-i="1" style="--w:88%"><b>Engage</b><span>Event page and spotlights</span></button></li>
+        <li><button type="button" role="tab" aria-selected="false" data-i="2" style="--w:76%"><b>Outreach</b><span>Automated, segmented email</span></button></li>
+        <li><button type="button" role="tab" aria-selected="false" data-i="3" style="--w:64%"><b>Convert</b><span>Tickets and countdown</span></button></li>
+        <li><button type="button" role="tab" aria-selected="false" data-i="4" style="--w:52%"><b>Retain</b><span>Follow-up and next event</span></button></li>
+      </ol>
+      <div class="fpanel" id="fpanel" role="tabpanel" aria-live="polite"></div>
+    </div>
+    <div class="beyond">
+      <h3>The same funnel works beyond events</h3>
+      <p>The layers stay the same whether the goal is a ticket, a product sale or an investor's attention. For Blacbiblio, it sold a teaching kit to schools. For QScreen AI, it keeps shareholders informed between financial reports.</p>
+      <div class="strat">
+        <div><b>Market intelligence</b><span>Who the audience is, where they spend time and what they already attend.</span></div>
+        <div><b>Competitor analysis</b><span>Other events and brands in the space: their dates, pricing, speakers and messaging.</span></div>
+        <div><b>Campaign strategy</b><span>Which channel does which job, in what order, and what each layer has to deliver.</span></div>
+        <div><b>Paid social</b><span>Facebook and Instagram campaigns in Meta Ads Manager, targeted by role, interest and location.</span></div>
       </div>
-      <div class="process">
-        <h4>Process: from prospect list to revenue</h4>
-        <p>Every email program I run follows the same five steps.</p>
-        <div class="flow">
-          <div><strong>Research</strong><span>Find the right audience in Sales Navigator</span></div>
-          <div><strong>Database</strong><span>Build, validate and segment</span></div>
-          <div><strong>Content</strong><span>Write and design each email</span></div>
-          <div><strong>Distribution</strong><span>Automated sequences and newsletters</span></div>
-          <div class="end"><strong>Conversion</strong><span>Tickets, sales and revenue</span></div>
-        </div>
-      </div>
-      <div class="process">
-        <h4>CQTA: the final-week email countdown</h4>
-        <p>How the six automated emails for the AI-adoption event were timed, from announcement to post-event.</p>
-        <div class="track">
-          <div><b>Four days out</b>Announcement</div>
-          <div><b>Three days out</b>Special guest spotlight</div>
-          <div><b>Two days out</b>Full lineup</div>
-          <div><b>One day out</b>Last chance</div>
-          <div class="hot"><b>Event morning</b>Day-of reminder</div>
-          <div><b>Event night</b>Post-event thank you</div>
-        </div>
-      </div>
-      <div class="process">
-        <h4>Blacbiblio: product campaigns and nurture automation</h4>
-        <p>Emails for an educational publisher promoting the ABC's of Canadian Black History Kit to teachers, with an automated nurture flow that follows up based on opens and clicks. Built and sent in Brevo.</p>
-        <div class="mock">
-          <a href="images/blacbiblio-results.jpg" target="_blank" rel="noopener"><img src="images/blacbiblio-results.jpg" alt="Brevo campaign report for Blacbiblio on a tablet: 10,659 delivered, 3,944 opens, 37% open rate, 8,068 clicks" loading="lazy" width="1600" height="1066"><span>Campaign results</span></a>
-          <a href="images/blacbiblio-email-automation.jpg" target="_blank" rel="noopener"><img src="images/blacbiblio-email-automation.jpg" alt="Two tablets: the Representation Matters email and the Brevo nurture automation workflow with campaign stats" loading="lazy" width="1600" height="1066"><span>Email and automation flow</span></a>
-          <a href="images/blacbiblio-email.jpg" target="_blank" rel="noopener"><img src="images/blacbiblio-email.jpg" alt="Tablet showing the Inclusive Education: Representation Matters email by Dr Dorothy W. Williams" loading="lazy" width="1600" height="1066"><span>Inclusive Education email</span></a>
-        </div>
-      </div>
-      <div class="process">
-        <h4>QScreen AI: The QAI Signal investor newsletter, Issue 04</h4>
-        <p>Written, designed and sent through Brevo. Hover to scroll the full issue.</p>
-        <div class="emailshot nl">
-          <a class="frame" href="images/qscreen-newsletter.webp" target="_blank" rel="noopener" aria-label="Open the full QAI Signal newsletter"><img src="images/qscreen-newsletter.webp" alt="The QAI Signal Issue 04, October 2026: financing complete, debt settlement explained, and by-the-numbers section" loading="lazy" width="1100" height="5365"></a>
-        </div>
-      </div>
-    </article>
+    </div>
   </div>
 </section>
 
-<section id="design">
+<section id="email">
   <div class="wrap">
-    <h2>Websites and design</h2>
-    <p class="lede">Websites, social media, newsletters and print I've designed and built.</p>
+    <h2>Email and outreach automation</h2>
+    <p class="lede">I design outreach systems, not just emails: the list, the segments, the sequence and the follow-up that turn a cold contact into a registered attendee or a customer.</p>
 
-    <!-- DEEP DIVE 3: DESIGN AND DEVELOPMENT -->
-    <article class="deep">
-      <div class="shots one">
-        <figure class="big"><a href="images/qscreen-site-home.webp" target="_blank" rel="noopener"><img src="images/qscreen-site-home.webp" alt="QScreen AI homepage hero: QAI Platform headline with a purple signal-wave banner image" loading="lazy" width="1400" height="898"></a>
-          <div class="stubtag"><span>q-screen.ai</span><b>Website</b></div></figure>
-        <figcaption>QScreen AI homepage, designed and built in 2026</figcaption>
+    <div class="auto">
+      <h3>My outreach automation system</h3>
+      <p>Built for CQTA's events and reused for product campaigns. Each step feeds the next, and every event makes the list better for the one after.</p>
+      <ol class="autoflow">
+        <li><b>Find</b><span>Search LinkedIn Sales Navigator by role, industry and region to build the target list.</span><i>Sales Navigator</i></li>
+        <li><b>Clean</b><span>Validate addresses and remove bounces before anything is sent, to protect deliverability.</span><i>List validation</i></li>
+        <li><b>Segment</b><span>Split past attendees, new prospects, speakers and sponsors so each gets the right message.</span><i>Brevo lists</i></li>
+        <li><b>Sequence</b><span>Automated emails timed to the event: invite, spotlight, full lineup, last chance, day-of.</span><i>Brevo automation</i></li>
+        <li><b>Convert and learn</b><span>Registrations come in through Eventbrite; opens and clicks shape the next send.</span><i>Reports</i></li>
+      </ol>
+      <div class="auto-stats">
+        <div><b>25,000+</b><span>contacts in the database</span></div>
+        <div><b>6</b><span>automated emails in the final week before each CQTA event</span></div>
+        <div><b>37%</b><span>open rate on a Blacbiblio campaign to 10,659 contacts</span></div>
+        <div><b>26%</b><span>average open rate, QScreen AI investor newsletter</span></div>
       </div>
-      <div class="in">
-        <h3>Design and development</h3>
-        <p class="where">Websites, social media design and print, 2024 to present</p>
-        <p class="challenge"><b>The challenge</b>Give a publicly listed company a credible, consistent presence across its website, social media and newsletter.</p>
-        <dl class="facts">
-          <dt>My role</dt><dd>Designer and developer</dd>
-          <dt>Tools</dt><dd>Adobe Creative Cloud, Canva, Framer</dd>
-          <dt>Featured</dt><dd>QScreen AI, publicly listed on the CSE</dd>
-        </dl>
-        <h4>What I did for QScreen AI</h4>
-        <ul>
-          <li>Designed and built the company website.</li>
-          <li>Design and run social media across LinkedIn, X and Instagram, including video content.</li>
-          <li>Design the investor newsletter, The QAI Signal (shown in <a href="#email">Email marketing</a>).</li>
-        </ul>
-        <div class="result"><b>Result:</b> an investor newsletter averaging a 26% open rate across Issues 02 to 04 on the main shareholder list, and a consistent brand across web, social and email.</div>
+    </div>
+
+    <div class="mailshow">
+      <div class="mtabs" role="tablist" aria-label="Email examples">
+        <button type="button" role="tab" aria-selected="true" data-m="0">CQTA · Special guest</button>
+        <button type="button" role="tab" aria-selected="false" data-m="1">CQTA · Full lineup</button>
+        <button type="button" role="tab" aria-selected="false" data-m="5">Blacbiblio · Newsletter</button>
+        <button type="button" role="tab" aria-selected="false" data-m="2">Blacbiblio · Campaign</button>
+        <button type="button" role="tab" aria-selected="false" data-m="3">QScreen AI · Newsletter</button>
       </div>
-      <div class="process">
-        <h4>The website</h4>
-        <p>Beyond the homepage above: the investor relations page with a live CSE stock chart, and the press release archive.</p>
-        <div class="qsite">
-          <a href="images/qscreen-site-investors.webp" target="_blank" rel="noopener"><img src="images/qscreen-site-investors.webp" alt="QScreen AI investors page with live CSE stock chart" loading="lazy" width="1400" height="986"><span>Investors page</span></a>
-          <a href="images/qscreen-site-press.webp" target="_blank" rel="noopener"><img src="images/qscreen-site-press.webp" alt="QScreen AI press release archive in a dark theme" loading="lazy" width="1400" height="923"><span>Press releases</span></a>
+      <div class="mstage">
+        <div class="mslide" data-m="0">
+          <a class="mframe" href="images/email-cqta-special-guest.webp" target="_blank" rel="noopener"><img src="images/email-cqta-special-guest.webp" alt="CQTA email: The CIO of Brampton is coming. Are you?" loading="lazy" width="659" height="2000"></a>
+          <div class="mtext"><p class="rtag">CQTA · Event campaign</p><h4>The CIO of Brampton is coming. Are you?</h4><p>A special-guest announcement sent three days before the event, built around one reason to come: a sitting city CIO on the panel. Discount code, date and venue sit above the fold, and the lineup repeats below for anyone still deciding.</p><ul><li>Written, designed and coded in HTML</li><li>Sent to segmented CQTA lists in Brevo</li><li>Part of a six-email countdown</li></ul><p class="hint">Hover the email to scroll it.</p></div>
+        </div>
+        <div class="mslide" data-m="1" hidden>
+          <a class="mframe" href="images/email-cqta-lineup.webp" target="_blank" rel="noopener"><img src="images/email-cqta-lineup.webp" alt="CQTA email: Every person in the room, the full lineup of speakers, panelists, MC and special guest" loading="lazy" width="659" height="3018"></a>
+          <div class="mtext"><p class="rtag">CQTA · Event campaign</p><h4>Every person in the room</h4><p>The full-lineup email, sent two days out. Each speaker gets a card with one line on why they're worth hearing, grouped by role, so a busy reader can skim the whole program in seconds.</p><ul><li>Eight speaker cards, colour-coded by role</li><li>Two calls to action with the community code</li><li>Same template as the rest of the sequence</li></ul><p class="hint">Hover the email to scroll it.</p></div>
+        </div>
+        <div class="mslide" data-m="2" hidden>
+          <a class="mframe flat" href="images/blacbiblio-email-automation.jpg" target="_blank" rel="noopener"><img src="images/blacbiblio-email-automation.jpg" alt="The Representation Matters email and the Brevo nurture automation workflow with campaign stats" loading="lazy" width="1600" height="1066"></a>
+          <div class="mtext"><p class="rtag">Blacbiblio · Product campaign</p><h4>Inclusive Education: Representation Matters</h4><p>Emails for an educational publisher promoting the ABC's of Canadian Black History Kit to teachers, with a nurture flow that follows up automatically based on who opened and clicked.</p><ul><li>10,659 delivered, 37% open rate, 8,068 clicks</li><li>Automated nurture branch in Brevo</li></ul><div class="minis"><a href="images/blacbiblio-results.jpg" target="_blank" rel="noopener"><img src="images/blacbiblio-results.jpg" alt="Brevo campaign report: 10,659 delivered, 37% open rate" loading="lazy" width="1600" height="1066"></a><a href="images/blacbiblio-email.jpg" target="_blank" rel="noopener"><img src="images/blacbiblio-email.jpg" alt="The Inclusive Education email on a tablet" loading="lazy" width="1600" height="1066"></a></div></div>
+        </div>
+        <div class="mslide" data-m="3" hidden>
+          <a class="mframe" href="images/qscreen-newsletter.webp" target="_blank" rel="noopener"><img src="images/qscreen-newsletter.webp" alt="The QAI Signal Issue 04, October 2026" loading="lazy" width="1100" height="5365"></a>
+          <div class="mtext"><p class="rtag">QScreen AI · Investor newsletter</p><h4>The QAI Signal, Issue 04</h4><p>A monthly investor newsletter for a CSE-listed company. Each issue turns financing news and filings into plain language, with a by-the-numbers section up top for readers who only skim.</p><ul><li>Four issues written, designed and sent</li><li>26% average open rate on the main shareholder list</li></ul><p class="hint">Hover the email to scroll it.</p></div>
+        </div>
+        <div class="mslide" data-m="5" hidden>
+          <a class="mframe" href="images/email-blacbiblio-newsletter.webp" target="_blank" rel="noopener"><img src="images/email-blacbiblio-newsletter.webp" alt="Blacbiblio Monthly Newsletter Issue 1: Teach Year-Round, Black Canadian History in Action" loading="lazy" width="700" height="3788"></a>
+          <div class="mtext"><p class="rtag">Blacbiblio · LinkedIn newsletter</p><h4>Teach Year-Round: Black Canadian History in Action</h4><p>The first issue of a monthly newsletter for teachers and school leaders, timed to Ontario's new Black history curriculum. It mixes classroom ideas with the ABC's of Canadian Black History Kit, so each issue educates first and sells second.</p><ul><li>Monthly series, written and designed in-house</li><li>Published as a LinkedIn newsletter</li></ul><p class="hint">Hover the newsletter to scroll it.</p></div>
+        </div>
         </div>
       </div>
-      <div class="process">
-        <h4>Social media: a six-slide product carousel</h4>
-        <p>Explains MobileWellbeing remote monitoring step by step, so a non-technical audience follows it in one swipe.</p>
+    </div>
+
+    <div class="countdown">
+      <h3>CQTA: the final-week countdown</h3>
+      <p>How the six automated emails for the October 1 event were timed.</p>
+      <div class="track">
+        <div><b>Four days out</b>Announcement</div>
+        <div><b>Three days out</b>Special guest spotlight</div>
+        <div><b>Two days out</b>Full lineup</div>
+        <div><b>One day out</b>Last chance</div>
+        <div class="hot"><b>Event morning</b>Day-of reminder</div>
+        <div><b>Event night</b>Post-event thank you</div>
+      </div>
+      <div class="suite">
+        <h3>Summer Mega Event: the full email suite</h3>
+        <div class="suite-cols">
+          <div><b>Before the event</b><ul><li>Complimentary ticket emails to each of the four sponsors</li><li>Co-marketing emails with Parasoft, Perforce, TTC Global and Tricentis</li><li>Attendee update with the agenda, hackathon timing and B2B sessions</li><li>After-hours RSVP with its own promo code</li></ul></div>
+          <div><b>After the event</b><ul><li>Thank-you email to all 90 attendees in Brevo, with photos and a feedback form</li><li>Personal thank-you notes to sponsors and speakers</li><li>Post-event report with results and next steps for CQTA</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="social">
+  <div class="wrap">
+    <h2>Social media and paid campaigns</h2>
+    <p class="lede">Campaigns I've planned, designed and run on LinkedIn, Instagram, Facebook and X, for events, products and investor relations.</p>
+
+    <div class="growth2">
+      <div>
+        <p class="rtag">CQTA · LinkedIn, one year</p>
+        <h3>From 300 to 1,596 followers, all organic</h3>
+        <p class="muted">A small, specific audience of quality engineering leaders, grown more than five times over without a single paid post.</p>
+      </div>
+      <div class="gnums">
+        <div><b>147,709</b><span>impressions</span></div>
+        <div><b>2,793</b><span>reactions</span></div>
+        <div><b>63</b><span>reposts</span></div>
+        <div><b>$0</b><span>paid promotion</span></div>
+      </div>
+    </div>
+
+    <div class="carousels three">
+      <figure class="cbox">
+        <div class="carousel" aria-roledescription="carousel" aria-label="CQTA event campaign">
+          <div class="track2" tabindex="0">
+            <img src="images/cqta-post-event-promo.jpg" alt="Event announcement post for The Real AI Adoption Curve" loading="lazy" width="900" height="900">
+            <img src="images/cqta-post-gold-sponsor.jpg" alt="Meet our Gold Sponsor post announcing Invest Mississauga" loading="lazy" width="900" height="900">
+            <img src="images/cqta-post-special-guest.jpg" alt="Meet our Special Guest post for Medhanie Tekeste, CIO of the City of Brampton" loading="lazy" width="900" height="900">
+            <img src="images/cqta-post-panelist-noel.jpg" alt="Meet our Panelist post, Accenture" loading="lazy" width="900" height="900">
+            <img src="images/cqta-post-panelist-angela.jpg" alt="Meet our Panelist post, Thomson Reuters" loading="lazy" width="900" height="900">
+            <img src="images/cqta-post-panelist-karthikeyan.jpg" alt="Meet our Panelist post, BMO" loading="lazy" width="900" height="900">
+            <img src="images/cqta-post-panelist-nisse.jpg" alt="Meet our Panelist post, TTC Global" loading="lazy" width="900" height="900">
+            <img src="images/cqta-post-after-hours-sponsor.jpg" alt="Meet our After Hour Sponsor post thanking Tricentis" loading="lazy" width="900" height="900">
+          </div>
+          <div class="cnav"><button type="button" data-d="-1" aria-label="Previous post">&larr;</button><span class="count">1 / 8</span><button type="button" data-d="1" aria-label="Next post">&rarr;</button></div>
+        </div>
+        <figcaption><b>CQTA event campaign</b>One announcement, then a steady run of sponsor, special guest and panelist spotlights to keep the event in people's feeds until the doors opened.</figcaption>
+      </figure>
+      <figure class="cbox">
         <div class="carousel" aria-roledescription="carousel" aria-label="MobileWellbeing carousel">
           <div class="track2" tabindex="0">
             <img src="images/qscreen-mw-1.webp" alt="Slide 1: Care that doesn't stop at the clinic door" loading="lazy" width="900" height="900">
@@ -705,85 +1001,169 @@ nav .mark{color:var(--plum)}
           </div>
           <div class="cnav"><button type="button" data-d="-1" aria-label="Previous slide">&larr;</button><span class="count">1 / 6</span><button type="button" data-d="1" aria-label="Next slide">&rarr;</button></div>
         </div>
-      </div>
-      <div class="process">
-        <h4>Social media: single posts</h4>
-        <p>Product posts, plus a "Capital Markets Explained" series that turns financing news into plain language for retail investors.</p>
-        <div class="posts">
-          <a href="images/qscreen-post-scans.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-scans.webp" alt="Post: 720,000+ real-world scans" loading="lazy" width="900" height="900"><span>Proof point</span></a>
-          <a href="images/qscreen-post-answers.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-answers.webp" alt="Post: Four simple answers from a 90-second screening" loading="lazy" width="900" height="900"><span>Product explainer</span></a>
-          <a href="images/qscreen-post-hardware.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-hardware.webp" alt="Post: AI screening shouldn't always require new hardware" loading="lazy" width="900" height="900"><span>Product benefit</span></a>
-          <a href="images/qscreen-post-unit.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-unit.webp" alt="Post: What is a unit in a financing?" loading="lazy" width="900" height="900"><span>Capital Markets Explained</span></a>
-          <a href="images/qscreen-post-debt.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-debt.webp" alt="Post: Shares for debt, explained" loading="lazy" width="900" height="900"><span>Capital Markets Explained</span></a>
+        <figcaption><b>QScreen AI product carousel</b>Six slides that explain remote health monitoring step by step, so a non-technical audience follows it in one swipe.</figcaption>
+      </figure>
+      <figure class="cbox">
+        <div class="carousel" aria-roledescription="carousel" aria-label="CQTA Summer Mega campaign">
+          <div class="track2" tabindex="0">
+            <img src="images/summer-post-70.jpg" alt="Meet our Guest of Honour post for Hesham Fahmy, TELUS" loading="lazy" width="900" height="900">
+            <img src="images/summer-post-87.jpg" alt="Early birds sold out, general admission going fast post" loading="lazy" width="900" height="900">
+            <img src="images/summer-post-71.jpg" alt="Meet our Panelist post for Arpita Bhattacharya, Canada Life" loading="lazy" width="900" height="900">
+            <img src="images/summer-post-74.jpg" alt="Meet our Mentor post for Ari Rowland, Accenture" loading="lazy" width="900" height="900">
+            <img src="images/summer-post-82.jpg" alt="CQTA Hackathon 2026 Meet our Judges post" loading="lazy" width="900" height="900">
+            <img src="images/summer-post-89.jpg" alt="Meet our Panelist post for Greg Cento, Sun Life" loading="lazy" width="900" height="900">
+            <img src="images/summer-post-parasoft.jpg" alt="Proud to welcome our Bronze Sponsor Parasoft post" loading="lazy" width="900" height="900">
+            <img src="images/summer-post-92.jpg" alt="Meet our After-Hour Sponsor Tricentis post" loading="lazy" width="900" height="900">
+            <img src="images/summer-post-88.jpg" alt="CQTA Leadership and Executive Networking Reception invitation post" loading="lazy" width="900" height="900">
+          </div>
+          <div class="cnav"><button type="button" data-d="-1" aria-label="Previous post">&larr;</button><span class="count">1 / 9</span><button type="button" data-d="1" aria-label="Next post">&rarr;</button></div>
         </div>
-      </div>
-      <div class="process" id="almas">
-        <h4>Almas Lighting: wholesaler product catalog</h4>
-        <p>A 16-page print and PDF catalog for an outdoor lighting brand: cover, brand story, and product pages organised by category, with pricing, SKUs and a scan-me QR code for every product.</p>
-        <div class="posts pages">
-          <a href="images/almas-cover.jpg" target="_blank" rel="noopener"><img src="images/almas-cover.jpg" alt="Almas Lighting product catalog cover, wholesaler edition, with a lit stone garden step" loading="lazy" width="1000" height="1294"><span>Cover</span></a>
-          <a href="images/almas-about.jpg" target="_blank" rel="noopener"><img src="images/almas-about.jpg" alt="About us page: why Almas Lighting, with a product photo and contact details" loading="lazy" width="1000" height="1294"><span>Brand story</span></a>
-          <a href="images/almas-pathlights.jpg" target="_blank" rel="noopener"><img src="images/almas-pathlights.jpg" alt="Pathlights product page with eight fixtures, prices and QR codes" loading="lazy" width="1000" height="1294"><span>Product page</span></a>
-          <a href="images/almas-hardscape.jpg" target="_blank" rel="noopener"><img src="images/almas-hardscape.jpg" alt="Hardscape and deck lights product page on a dark header" loading="lazy" width="1000" height="1294"><span>Product page</span></a>
-          <a href="images/almas-back.jpg" target="_blank" rel="noopener"><img src="images/almas-back.jpg" alt="Back cover: garden path light at dusk with the wholesaler edition tagline" loading="lazy" width="1000" height="1294"><span>Back cover</span></a>
-        </div>
-      </div>
-      <div class="process">
-        <h4>More design work</h4>
-        <p>Branding, print and websites for other clients.</p>
-        <div class="stages4 three">
-          <figure><a class="dshot" href="images/design-blush-cans.jpg" target="_blank" rel="noopener"><img src="images/design-blush-cans.jpg" alt="Three Blush sparkling juice cans in apple green, peach and cherry red on white plinths" loading="lazy" width="1600" height="1200" style="object-position:center 45%"></a><figcaption>Blush, branding and web design</figcaption></figure>
-          <figure><a class="dshot" href="images/design-lejeune-website.jpg" target="_blank" rel="noopener"><img src="images/design-lejeune-website.jpg" alt="Lejeune Institute homepage: Preserving Black Narratives, Shaping Canadian History, with services below" loading="lazy" width="1600" height="1158"></a><figcaption>Lejeune Institute, website</figcaption></figure>
-          <figure><a class="dshot" href="images/design-thinking-north-website.jpg" target="_blank" rel="noopener"><img src="images/design-thinking-north-website.jpg" alt="Thinking North homepage: Invest in Freedom, Live by Design, beside the Toronto skyline with the Thinking North logo" loading="lazy" width="1600" height="847" style="object-position:35% top"></a><figcaption>Thinking North, website redesign</figcaption></figure>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
+        <figcaption><b>CQTA Summer Mega campaign</b>Part of 32 posts: guest of honour, panelists, mentors, judges, sponsors and urgency posts like "early birds sold out".</figcaption>
+      </figure>
+    </div>
 
-<section id="ai">
-  <div class="wrap">
-    <h2>How I use AI</h2>
-    <p class="lede">AI is built into how I work, so a small team can move at the pace of a large one. I use Claude and other AI tools every day, and every output is reviewed and edited by me.</p>
-    <div class="ai">
-      <div><h3>Content</h3><p>Drafting event posts, speaker spotlights and email copy, then editing them to each brand's voice.</p></div>
-      <div><h3>Automation</h3><p>Workflows that turn one press release into social posts and newsletter updates, and email sequences that run on their own.</p></div>
-      <div><h3>Research and data</h3><p>Faster audience research and list building, so every send goes to the right people.</p></div>
-      <div><h3>Building</h3><p>Investor decks built in code and this portfolio itself, designed and developed with AI-assisted tools.</p></div>
+    <div class="promos" id="promos">
+      <h3>Event promo videos</h3>
+      <p>Short vertical videos I made for Instagram and LinkedIn to drive registrations.</p>
+      <div class="pgrid">
+        <figure><div class="pv"><video src="videos/promo-ai-real-estate.mp4" poster="images/promo-ai-real-estate-poster.jpg" controls playsinline preload="none" aria-label="AI in Real Estate mixer promo video"></video></div><figcaption><b>AI in Real Estate mixer</b>Venue walk-through promo</figcaption></figure>
+        <figure><div class="pv"><video src="videos/promo-ai-real-estate-teaser.mp4" poster="images/promo-ai-real-estate-teaser-poster.jpg" controls playsinline preload="none" aria-label="AI in Real Estate is calling teaser video"></video></div><figcaption><b>"AI in Real Estate is calling"</b>Teaser in a phone-call format</figcaption></figure>
+        <figure><div class="pv"><video src="videos/promo-ai-tech-startups.mp4" poster="images/promo-ai-tech-startups-poster.jpg" controls playsinline preload="none" aria-label="AI, Tech and Startups mixer promo video"></video></div><figcaption><b>AI, Tech and Startups mixer</b>Join-us invitation</figcaption></figure>
+        <figure><div class="pv"><video src="videos/promo-networking-mixer.mp4" poster="images/promo-networking-mixer-poster.jpg" controls playsinline preload="none" aria-label="Networking mixer promo video"></video></div><figcaption><b>Networking mixer</b>Night-out recap promo</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="singles">
+      <h3>Single posts</h3>
+      <p>Product posts for QScreen AI, plus a "Capital Markets Explained" series that turns financing news into plain language for retail investors.</p>
+      <div class="posts">
+        <a href="images/qscreen-post-scans.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-scans.webp" alt="Post: 720,000+ real-world scans" loading="lazy" width="900" height="900"><span>Proof point</span></a>
+        <a href="images/qscreen-post-answers.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-answers.webp" alt="Post: Four simple answers from a 90-second screening" loading="lazy" width="900" height="900"><span>Product explainer</span></a>
+        <a href="images/qscreen-post-hardware.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-hardware.webp" alt="Post: AI screening shouldn't always require new hardware" loading="lazy" width="900" height="900"><span>Product benefit</span></a>
+        <a href="images/qscreen-post-unit.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-unit.webp" alt="Post: What is a unit in a financing?" loading="lazy" width="900" height="900"><span>Capital Markets Explained</span></a>
+        <a href="images/qscreen-post-debt.webp" target="_blank" rel="noopener"><img src="images/qscreen-post-debt.webp" alt="Post: Shares for debt, explained" loading="lazy" width="900" height="900"><span>Capital Markets Explained</span></a>
+      </div>
+    </div>
+
+    <div class="adres">
+      <div>
+        <p class="rtag">Paid social · LinkedIn Ads</p>
+        <h3>Summer Mega Event ad campaign</h3>
+        <p>A four-week awareness campaign (June 3 to 30, 2026) on a CA$10 a day budget, targeted at quality engineering and tech leaders, driving clicks to the event page.</p>
+        <p class="muted">All three efficiency measures beat LinkedIn's typical benchmarks.</p>
+      </div>
+      <div class="adnums">
+        <div><b>CA$268</b><span>total spend</span></div>
+        <div><b>23,374</b><span>impressions</span></div>
+        <div><b>156</b><span>clicks to the event page</span></div>
+        <div><b>0.67%</b><span>click-through rate, vs 0.39 to 0.65% average</span></div>
+        <div><b>CA$1.72</b><span>cost per click, vs CA$5 to CA$12 average</span></div>
+      </div>
+    </div>
+    <div class="adres ev">
+      <div>
+        <p class="rtag">Paid ads · Event mixers</p>
+        <h3>Ticketing ad campaigns for three mixers</h3>
+        <p>Traffic campaigns at CA$10 a day, run in the 9 to 10 days before each event (April, May and October 2026) and pointed straight at the ticket page.</p>
+        <table class="adtbl"><thead><tr><th>Event</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th></tr></thead><tbody>
+          <tr><td>Apr 23 mixer</td><td>CA$90</td><td>10,305</td><td>200</td><td>1.94%</td><td>CA$0.45</td></tr>
+          <tr><td>May 28 mixer</td><td>CA$100</td><td>9,351</td><td>126</td><td>1.35%</td><td>CA$0.80</td></tr>
+          <tr><td>Oct 8 mixer</td><td>CA$130</td><td>11,170</td><td>111</td><td>0.99%</td><td>CA$1.17</td></tr>
+        </tbody></table>
+      </div>
+      <div class="adnums">
+        <div><b>30,826</b><span>impressions</span></div>
+        <div><b>437</b><span>clicks to ticket pages</span></div>
+        <div><b>1.42%</b><span>average click-through rate</span></div>
+        <div><b>CA$0.73</b><span>average cost per click</span></div>
+        <div><b>CA$320</b><span>total spend across three events</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="system">
+<section id="design">
   <div class="wrap">
-    <h2>How I run an event campaign</h2>
-    <p class="lede">The five-stage process I use for every event. Pick a stage to see what I do in it.</p>
-    <div class="steps" role="tablist" aria-label="Event campaign stages">
-      <button class="step" role="tab" aria-selected="true" data-i="0"><small>Stage 1</small><strong>Event page</strong></button>
-      <button class="step" role="tab" aria-selected="false" data-i="1"><small>Stage 2</small><strong>Social campaign</strong></button>
-      <button class="step" role="tab" aria-selected="false" data-i="2"><small>Stage 3</small><strong>Email sequence</strong></button>
-      <button class="step" role="tab" aria-selected="false" data-i="3"><small>Stage 4</small><strong>Ticketing</strong></button>
-      <button class="step" role="tab" aria-selected="false" data-i="4"><small>Stage 5</small><strong>Follow-up</strong></button>
+    <h2>Design, web and video</h2>
+    <p class="lede">I design and build the assets my campaigns need myself: websites, social graphics, emails, print and video.</p>
+
+    <div class="browser">
+      <div class="btabs" role="tablist" aria-label="Websites">
+        <button type="button" role="tab" aria-selected="true" data-b="0">QScreen AI</button>
+        <button type="button" role="tab" aria-selected="false" data-b="3">Lejeune Institute</button>
+        <button type="button" role="tab" aria-selected="false" data-b="4">Thinking North</button>
+      </div>
+      <div class="bwin">
+        <div class="bbar"><i></i><i></i><i></i><span class="burl">q-screen.ai</span></div>
+        <div class="bview">
+          <img data-b="0" src="images/qscreen-site-home.webp" alt="QScreen AI homepage with the QAI Platform headline and a purple signal-wave banner" loading="lazy" width="1400" height="898">
+          <img data-b="3" src="images/design-lejeune-website.jpg" alt="Lejeune Institute homepage: Preserving Black Narratives, Shaping Canadian History" loading="lazy" width="1600" height="1158" hidden>
+          <img data-b="4" src="images/design-thinking-north-website.jpg" alt="Thinking North homepage: Invest in Freedom, Live by Design" loading="lazy" width="1600" height="847" hidden>
+        </div>
+      </div>
+      <div class="bcopy">
+        <div>
+          <p class="rtag">Featured · QScreen AI, listed on the CSE</p>
+          <h3>Website, social and newsletter for a public company</h3>
+          <p>I designed and built the QScreen AI website, and I design and run its social media and investor newsletter, so the company looks the same wherever an investor meets it.</p>
+        </div>
+        <dl class="facts">
+          <dt>My role</dt><dd>Designer and developer</dd>
+          <dt>Tools</dt><dd>Framer, Adobe Creative Cloud, Canva</dd>
+          <dt>Also built</dt><dd>Lejeune Institute website, Thinking North redesign</dd>
+          <dt>Live sites</dt><dd class="live"><a href="https://q-screen.ai" target="_blank" rel="noopener">q-screen.ai &rarr;</a><a href="https://lejeuneinstitute.ca" target="_blank" rel="noopener">lejeuneinstitute.ca &rarr;</a><a href="https://thinkingnorth.com/" target="_blank" rel="noopener">thinkingnorth.com &rarr;</a></dd>
+        </dl>
+      </div>
     </div>
-    <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+
+    <div class="vimeo">
+      <h3>Brand and product videos</h3>
+      <p>Commercial work I directed and produced through BL Digital and Creatives.</p>
+      <div class="vgrid"><figure><div class="vm"><iframe src="https://player.vimeo.com/video/1087630527?dnt=1&title=0&byline=0&portrait=0" title="Jackson-Triggs product shoot" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div><figcaption><b>Jackson-Triggs product shoot</b>Creative direction and production for a Canadian wine brand</figcaption></figure><figure><div class="vm"><iframe src="https://player.vimeo.com/video/1087632596?dnt=1&title=0&byline=0&portrait=0" title="Austropical product video" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div><figcaption><b>Austropical product video</b>Directed a product film for a food brand</figcaption></figure><figure><div class="vm"><iframe src="https://player.vimeo.com/video/1087632614?dnt=1&title=0&byline=0&portrait=0" title="Austropical logo reveal" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div><figcaption><b>Austropical logo reveal</b>Directed a short brand reveal</figcaption></figure><figure><div class="vm"><iframe src="https://player.vimeo.com/video/1118540262?dnt=1&title=0&byline=0&portrait=0" title="Digy4 internship testimonials" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div><figcaption><b>Digy4 internship testimonials</b>Story-led testimonial video for a tech company</figcaption></figure></div>
+    </div>
+
+    <div class="print">
+      <h3>Print and branding</h3>
+      <p>Almas Lighting: a 16-page wholesaler catalog with pricing, SKUs and a QR code for every product. Blush: branding and packaging for a sparkling juice.</p>
+      <div class="posts pages six">
+        <a href="images/almas-cover.jpg" target="_blank" rel="noopener"><img src="images/almas-cover.jpg" alt="Almas Lighting catalog cover" loading="lazy" width="1000" height="1294"><span>Almas · Cover</span></a>
+        <a href="images/almas-about.jpg" target="_blank" rel="noopener"><img src="images/almas-about.jpg" alt="Almas Lighting brand story page" loading="lazy" width="1000" height="1294"><span>Almas · Brand story</span></a>
+        <a href="images/almas-pathlights.jpg" target="_blank" rel="noopener"><img src="images/almas-pathlights.jpg" alt="Almas Lighting pathlights product page" loading="lazy" width="1000" height="1294"><span>Almas · Product page</span></a>
+        <a href="images/almas-hardscape.jpg" target="_blank" rel="noopener"><img src="images/almas-hardscape.jpg" alt="Almas Lighting hardscape product page" loading="lazy" width="1000" height="1294"><span>Almas · Product page</span></a>
+        <a href="images/almas-back.jpg" target="_blank" rel="noopener"><img src="images/almas-back.jpg" alt="Almas Lighting back cover" loading="lazy" width="1000" height="1294"><span>Almas · Back cover</span></a>
+        <a href="images/design-blush-cans.jpg" target="_blank" rel="noopener"><img src="images/design-blush-cans.jpg" alt="Three Blush sparkling juice cans" loading="lazy" width="1600" height="1200" style="object-position:center 45%"><span>Blush · Packaging</span></a>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="results">
+<section id="toolkit">
   <div class="wrap">
-    <h2>Growing a niche audience organically</h2>
-    <p class="lede">CQTA speaks to quality engineering leaders, a small and specific audience. I grew its LinkedIn page more than five times over in one year without a single paid post.</p>
-    <div class="growth">
-      <div class="bars" id="bars" role="img" aria-label="LinkedIn followers grew from 300 to 1,596 in one year">
-        <div class="col"><div class="b" data-h="18.8"></div><b>300</b><span>Start of year</span></div>
-        <div class="col after"><div class="b" data-h="100"></div><b>1,596</b><span>One year later</span></div>
-      </div>
-      <div class="eng">
-        <div><span>Organic impressions</span><b>147,709</b></div>
-        <div><span>Reactions</span><b>2,793</b></div>
-        <div><span>Reposts</span><b>63</b></div>
-        <div><span>Paid promotion</span><b>$0</b></div>
-      </div>
+    <h2>Toolkit</h2>
+    <p class="lede">What I can pick up on day one, grouped by the part of the job it covers.</p>
+    <div class="kit">
+      <div><h3>Events</h3><ul><li>Eventbrite</li><li>Luma</li><li>Registration and ticketing</li><li>Sponsor and speaker coordination</li><li>Event day and post-event comms</li></ul></div>
+      <div><h3>Email and automation</h3><ul><li>Brevo, Klaviyo, Mailchimp</li><li>LinkedIn Sales Navigator</li><li>Segmentation and deliverability</li><li>Automated sequences</li></ul></div>
+      <div><h3>Social and ads</h3><ul><li>Meta Ads Manager</li><li>LinkedIn, Instagram, Facebook, X</li><li>LinkedIn analytics</li><li>Content calendars</li></ul></div>
+      <div><h3>Strategy</h3><ul><li>Funnel design</li><li>Market intelligence</li><li>Competitor analysis</li><li>Campaign planning</li></ul></div>
+      <div><h3>Design, web and video</h3><ul><li>Adobe Creative Cloud</li><li>Canva</li><li>Framer, HTML, CSS, JavaScript</li><li>Video content</li></ul></div>
+    </div>
+    <div class="aiuse">
+      <h3>How I use AI</h3>
+      <p>I use Claude and other AI tools every day to draft copy, research audiences, build workflows and automate repeat work. Every output is reviewed and edited by me. This portfolio was designed and built with AI-assisted tools.</p>
+    </div>
+    <div class="certs">
+      <h3>Education</h3>
+      <ul class="edu">
+        <li><b>Diploma, Multimedia Design and Development (Honours)</b><span>Humber College, Toronto</span></li>
+        <li><b>Bachelor of Computer Science</b><span>National School of Sciences, Nepal · 2022, completed while working</span></li>
+      </ul>
+      <h3>Certifications</h3>
+      <ul>
+        <li>Complete Agile Scrum Master Certification Training</li>
+        <li>Gamification: Motivation Psychology and the Art of Engagement</li>
+        <li>YouTube SEO and Algorithm Mastery</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -793,8 +1173,9 @@ nav .mark{color:var(--plum)}
     <img class="headshot" src="images/sashya-paudel.jpg?v=2" alt="Sashya Paudel" width="800" height="1200" loading="lazy">
     <div>
       <h2>About me</h2>
-      <p>I'm an event marketer based in Toronto, with a Bachelor of Computer Science and an honours diploma in Multimedia Design and Development from Humber College. That mix is why I build the systems behind events, not just the posts.</p>
-      <p>Over the past few years I've marketed industry events for CQTA, run email and social programs for clients including Blacbiblio and QScreen AI, and organized networking events across the city. Outside work, I volunteer as Toronto chapter lead for The Great Nepali Diaspora, a community of Nepali professionals.</p>
+      <p>I'm a Toronto-based marketing professional specializing in events and digital marketing. My focus is the digital side of an event: the social campaigns, email automation, paid ads, design and video that fill a room, plus the coordination with venues, speakers and sponsors that makes the day run.</p>
+      <p>I studied computer science and multimedia design, so I build the systems behind a campaign myself instead of handing them off.</p>
+      <p>Since 2024 I've marketed industry events for CQTA, run email and social programs for clients including Blacbiblio and QScreen AI, and helped run networking events across the city. Outside work, I volunteer as Toronto chapter lead for The Great Nepali Diaspora, a community of Nepali professionals.</p>
     </div>
   </div>
 </section>
@@ -813,27 +1194,7 @@ nav .mark{color:var(--plum)}
   </div>
 </section>
 
-<section id="skills">
-  <div class="wrap">
-    <h2>Tools I use</h2>
-    <p class="lede">The software behind the work above.</p>
-    <div class="skills">
-      <div><h3>Design</h3><ul><li>Adobe Creative Cloud</li><li>Canva</li><li>Social media design</li><li>Print and price books</li></ul></div>
-      <div><h3>Development</h3><ul><li>Framer</li><li>Web design and development</li><li>JavaScript</li><li>Claude and AI automation</li></ul></div>
-      <div><h3>Marketing</h3><ul><li>Brevo, Klaviyo, Mailchimp</li><li>LinkedIn Sales Navigator</li><li>Meta Ads (Instagram, Facebook)</li><li>LinkedIn analytics</li></ul></div>
-      <div><h3>Events</h3><ul><li>Eventbrite</li><li>Registration funnels</li><li>Sponsor and speaker coordination</li><li>Event day and post-event comms</li></ul></div>
-    </div>
-    <div class="certs">
-      <h3>Certifications</h3>
-      <ul>
-        <li>Complete Agile Scrum Master Certification Training</li>
-        <li>Gamification: Motivation Psychology and the Art of Engagement</li>
-        <li>YouTube SEO and Algorithm Mastery</li>
-        <li><span class="todo">In progress</span> Add new course here</li>
-      </ul>
-    </div>
-  </div>
-</section>
+
 
 <section id="contact" style="border-top:0">
   <div class="wrap">
@@ -849,21 +1210,10 @@ nav .mark{color:var(--plum)}
     </div>
   </div>
 </section>
-<footer><div class="wrap">Sashya Paudel, Toronto. <a href="https://www.linkedin.com/in/hi-i-amsashya-paudel" target="_blank" rel="noopener">LinkedIn</a>. Version 2, November 2026.</div></footer>
+<footer><div class="wrap">Sashya Paudel, Toronto. <a href="https://www.linkedin.com/in/hi-i-amsashya-paudel" target="_blank" rel="noopener">LinkedIn</a>.</div></footer>
 
 <script>
-const stages=[
- {t:"Event page",d:"The page does the selling before anyone opens an email.",l:["Clear title, date, venue and who it's for","Speakers and sponsors front and centre","Community discount codes","One call to action: get your ticket"],tools:["Eventbrite","Copywriting","Design"],side:"<p class='note'>Every event I run launches from the same page structure, so each new event starts from a proven layout.</p>"},
- {t:"Social campaign",d:"Organic LinkedIn content built for a niche professional audience.",l:["Speaker spotlights and panel announcements","Countdown posts timed with the email sequence","Sponsor spotlights","Post-event highlights that sell the next one"],tools:["LinkedIn","Instagram","X","AI-assisted drafting"],side:"<p><b style='font-family:var(--display);font-size:2rem;color:var(--plum)'>300 to 1,596</b><br><span class='note'>followers in one year, with no paid spend</span></p>"},
- {t:"Email sequence",d:"Six automated emails in the final days, each with one job.",l:["Segmented lists so every send lands with the right people","List hygiene before each send to protect deliverability","A post-event email that keeps the audience warm"],tools:["Brevo","Segmentation","Automation"],side:"<ol class='timeline'><li><b>Four days out</b>Announcement</li><li><b>Three days out</b>Special guest spotlight</li><li><b>Two days out</b>Full lineup</li><li><b>One day out</b>Last chance</li><li><b>Event morning</b>Day-of reminder</li><li><b>Event night</b>Post-event thank you</li></ol>"},
- {t:"Ticketing",d:"Every channel feeds one ticketing funnel, so nothing leaks.",l:["One ticketing page that every channel points to","Community discount codes","Sales tracked against the 150-seat capacity"],tools:["Eventbrite","Discount tracking","Reporting"],side:"<p><b style='font-family:var(--display);font-size:2rem;color:var(--plum)'>150 / 150</b><br><span class='note'>seats sold at sold-out CQTA events</span></p>"},
- {t:"Follow-up",d:"The event ends, the relationship doesn't.",l:["Same-night thank you email","Highlight posts for attendees and sponsors","Attendees carried into the next event's list"],tools:["Brevo","LinkedIn","Sponsor reporting"],side:"<p class='note'>Post-event content is the first piece of marketing for the next event, which is how each quarter starts with a warm audience.</p>"}
-];
-const panel=document.getElementById('panel'),tabs=[...document.querySelectorAll('.step')];
-function show(i){tabs.forEach((b,j)=>b.setAttribute('aria-selected',j===i));const s=stages[i];
- panel.innerHTML=`<div><h3>${s.t}</h3><p>${s.d}</p><ul>${s.l.map(x=>`<li>${x}</li>`).join('')}</ul><div class="tools">${s.tools.map(x=>`<span>${x}</span>`).join('')}</div></div><div>${s.side}</div>`;}
-tabs.forEach((b,i)=>{b.addEventListener('click',()=>show(i));b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){tabs[(i+1)%5].focus();show((i+1)%5)}if(e.key==='ArrowLeft'){tabs[(i+4)%5].focus();show((i+4)%5)}})});
-show(0);
+
 
 document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
@@ -879,7 +1229,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return
  if(el.id==='bars'){el.querySelectorAll('.b').forEach(b=>b.style.height=b.dataset.h+'%')}
  else if(el.dataset.count){countUp(el,+el.dataset.count,el.dataset.suffix||'')}
  io.unobserve(el)}),{threshold:.4});
-document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));io.observe(document.getElementById('bars'));
+document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
 </script>
 <script>
 (function(){var f=document.querySelectorAll('.mail .frame');function set(){f.forEach(function(e){e.style.setProperty('--fh',e.clientHeight+'px')})}set();addEventListener('resize',set)})();
@@ -889,5 +1239,31 @@ document.querySelectorAll('.carousel').forEach(c=>{const t=c.querySelector('.tra
  t.addEventListener('scroll',()=>{ct.textContent=(idx()+1)+' / '+n});
  t.addEventListener('keydown',e=>{if(e.key==='ArrowRight')c.querySelector('[data-d="1"]').click();if(e.key==='ArrowLeft')c.querySelector('[data-d="-1"]').click()});});
 </script>
+<script>
+(function(){
+ const F=[
+  {t:"Reach",d:"Put the event in front of the right people, through paid and organic channels at once.",l:["LinkedIn ads targeted by job title, and Facebook and Instagram ads in Meta Ads Manager","Organic LinkedIn posts on the client's page","Speakers and sponsors reshare their own spotlight posts","Partner communities and investor networks"],n:"23,374",p:"paid LinkedIn impressions at CA$1.72 a click for the Summer Mega Event, against a LinkedIn average of CA$5 to CA$12"},
+  {t:"Engage",d:"Give people reasons to care: the event page and a steady run of spotlights.",l:["Event page with title, date, venue and who it's for above the fold","Speaker, panelist, sponsor and special-guest spotlights","Short promo and highlight videos","Countdown posts timed to the email sequence"],n:"32",p:"posts designed for the Summer Mega campaign: speaker reveals, judge cards, sponsor spotlights and countdowns"},
+  {t:"Outreach",d:"Reach people directly with segmented, automated email.",l:["Target lists built in LinkedIn Sales Navigator","Lists validated and segmented before any send","Sequences in Brevo: invite, spotlight, lineup, last chance","Personal invitations to high-value guests"],n:"25,000+",p:"contacts in the outreach database"},
+  {t:"Convert",d:"Turn interest into tickets, with nothing standing in the way.",l:["One ticketing page on Eventbrite or Luma that every channel points to","Community discount codes, such as 15% off for the CQTA community","Last-chance and day-of emails","Sales tracked against capacity"],n:"110",p:"Summer Mega tickets sold, with the biggest spike June 23 to 25 from urgency posts and last-chance emails"},
+  {t:"Retain",d:"The event ends, the relationship doesn't. Every attendee starts the next funnel warm.",l:["Same-night thank-you email with photos and a feedback form","Highlight posts that tag speakers and sponsors","Attendees added to the next event's list","Sponsor recap for renewals"],n:"Every quarter",p:"starts with a warm audience from the last event"}
+ ];
+ const btns=[...document.querySelectorAll('.funnel button')],panel=document.getElementById('fpanel'),cols=['--plum','--rose','--teal','--indigo','--gold'];
+ if(!panel)return;
+ function show(i){btns.forEach((b,j)=>b.setAttribute('aria-selected',j===i));const f=F[i];
+  panel.style.borderTopColor='var('+cols[i]+')';
+  panel.innerHTML='<p class="rtag" style="color:var('+cols[i]+')">Layer '+(i+1)+' of 5</p><h3>'+f.t+'</h3><p>'+f.d+'</p><ul>'+f.l.map(x=>'<li>'+x+'</li>').join('')+'</ul><div class="fproof"><b style="color:var('+cols[i]+')">'+f.n+'</b><span>'+f.p+'</span></div>';}
+ btns.forEach((b,i)=>{b.addEventListener('click',()=>show(i));b.addEventListener('keydown',e=>{const k={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[e.key];if(k){e.preventDefault();const n=(i+k+5)%5;btns[n].focus();show(n)}})});
+ show(0);
+})();
+function tabset(sel,attr,onShow){
+ const tabs=[...document.querySelectorAll(sel)];
+ tabs.forEach(t=>t.addEventListener('click',()=>{const v=t.dataset[attr];tabs.forEach(x=>x.setAttribute('aria-selected',x===t));onShow(v,t)}));
+}
+tabset('.mtabs button','m',v=>document.querySelectorAll('.mslide').forEach(s=>s.hidden=s.dataset.m!==v));
+const urls=['q-screen.ai','','','lejeuneinstitute.ca','thinkingnorth.com'];
+tabset('.btabs button','b',v=>{document.querySelectorAll('.bview img').forEach(i=>i.hidden=i.dataset.b!==v);const bv=document.querySelector('.bview');if(bv)bv.scrollTop=0;const u=document.querySelector('.burl');if(u)u.textContent=urls[+v]});
+</script>
+
 </body>
 </html>
