@@ -597,7 +597,7 @@ nav .mark{color:var(--plum)}
 .suite-cols b{color:var(--indigo)}.suite-cols ul{margin:8px 0 0;padding-left:18px}
 .promos{margin:10px 0 34px}
 .promos h3{font-size:1.3rem;margin-bottom:6px}.promos>p{color:var(--muted);margin:0 0 18px}
-.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .pgrid figure{margin:0}
 .pv{aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000}
 .pv video{width:100%;height:100%;object-fit:cover;display:block}
@@ -610,8 +610,8 @@ nav .mark{color:var(--plum)}
 .edu{list-style:none;padding:0;margin:0 0 24px}
 .edu li{padding:10px 0;border-bottom:1px solid var(--line)}
 .edu b{display:block}.edu span{color:var(--muted);font-size:.92rem}
-@media (max-width:900px){.carousels.three{grid-template-columns:1fr 1fr}.pgrid{grid-template-columns:1fr 1fr}.history{grid-template-columns:1fr 1fr;row-gap:18px}.rstats{grid-template-columns:1fr 1fr}.adres{grid-template-columns:1fr}}
-@media (max-width:600px){.carousels.three,.suite-cols{grid-template-columns:1fr}.runs-mega{grid-template-columns:1fr}.rmedia{grid-template-columns:1fr 1fr;grid-auto-rows:120px}.rmedia .rvid{grid-column:1/-1;grid-row:auto;height:220px}.adnums{grid-template-columns:1fr 1fr}.rfacts{grid-template-columns:1fr}}
+@media (max-width:900px){.carousels.three{grid-template-columns:1fr 1fr}.pgrid{grid-template-columns:repeat(3,1fr)}.history{grid-template-columns:1fr 1fr;row-gap:18px}.rstats{grid-template-columns:1fr 1fr}.adres{grid-template-columns:1fr}}
+@media (max-width:600px){.pgrid{grid-template-columns:1fr 1fr}.pgrid figure:last-child:nth-child(odd){grid-column:1/-1;width:calc(50% - 7px);justify-self:center}.carousels.three,.suite-cols{grid-template-columns:1fr}.runs-mega{grid-template-columns:1fr}.rmedia{grid-template-columns:1fr 1fr;grid-auto-rows:120px}.rmedia .rvid{grid-column:1/-1;grid-row:auto;height:220px}.adnums{grid-template-columns:1fr 1fr}.rfacts{grid-template-columns:1fr}}
 .case.wide{grid-column:1/-1;display:grid;grid-template-columns:1.1fr 1fr}
 .case.wide .banner{border-bottom:0;border-radius:0}.case.wide .banner img{height:100%;aspect-ratio:auto}
 .evphotos.two{grid-template-columns:1fr 1fr}
@@ -819,8 +819,8 @@ nav .mark{color:var(--plum)}
         <div class="in">
           <h3>AI in Real Estate, Construction and Trade Mixer</h3>
           <p class="where">Soluna, Toronto, October 8, 2026</p>
-          <p>A mixer for founders, tech leaders and investors in real estate, construction and the trades, with 80 to 90 guests. I ran the marketing and digital execution, including two promo videos (see <a href="#promos">promo videos</a>) and the highlight reel below.</p>
-          <div class="evmedia"><div class="pv"><video src="videos/ai-real-estate-highlights.mp4" poster="images/ai-real-estate-highlights-poster.jpg" controls playsinline preload="none" aria-label="Highlight reel from the AI in Real Estate mixer"></video></div><div class="evphotos stack"><a href="images/re-group.jpg" target="_blank" rel="noopener"><img src="images/re-group.jpg" alt="Group of attendees at Soluna" loading="lazy" width="1400" height="1050"></a><a href="images/re-group3.jpg" target="_blank" rel="noopener"><img src="images/re-group3.jpg" alt="Sashya with attendees at Soluna" loading="lazy" width="1400" height="1050"></a><a href="images/re-group2.jpg" target="_blank" rel="noopener"><img src="images/re-group2.jpg" alt="Attendees at the Soluna bar" loading="lazy" width="1400" height="1050"></a></div></div>
+          <p>A mixer for founders, tech leaders and investors in real estate, construction and the trades, with 80 to 90 guests. I ran the marketing and digital execution, including two promo videos and a highlight reel (see <a href="#promos">event videos</a>).</p>
+          <div class="evphotos"><a href="images/re-group.jpg" target="_blank" rel="noopener"><img src="images/re-group.jpg" alt="Group of attendees at Soluna" loading="lazy" width="1400" height="1050"></a><a href="images/re-group3.jpg" target="_blank" rel="noopener"><img src="images/re-group3.jpg" alt="Sashya with attendees at Soluna" loading="lazy" width="1400" height="1050"></a><a href="images/re-group2.jpg" target="_blank" rel="noopener"><img src="images/re-group2.jpg" alt="Attendees at the Soluna bar" loading="lazy" width="1400" height="1050"></a></div>
           <div class="chips"><span>Promotion</span><span>Video</span><span>Venue coordination</span></div>
         </div>
       </article>
@@ -1022,13 +1022,14 @@ nav .mark{color:var(--plum)}
     </div>
 
     <div class="promos" id="promos">
-      <h3>Event promo videos</h3>
-      <p>Short vertical videos I made for Instagram and LinkedIn to drive registrations.</p>
+      <h3>Event promo and highlight videos</h3>
+      <p>Short vertical videos I made for Instagram and LinkedIn: promos to drive registrations, and a highlight reel to sell the next event.</p>
       <div class="pgrid">
         <figure><div class="pv"><video src="videos/promo-ai-real-estate.mp4" poster="images/promo-ai-real-estate-poster.jpg" controls playsinline preload="none" aria-label="AI in Real Estate mixer promo video"></video></div><figcaption><b>AI in Real Estate mixer</b>Venue walk-through promo</figcaption></figure>
         <figure><div class="pv"><video src="videos/promo-ai-real-estate-teaser.mp4" poster="images/promo-ai-real-estate-teaser-poster.jpg" controls playsinline preload="none" aria-label="AI in Real Estate is calling teaser video"></video></div><figcaption><b>"AI in Real Estate is calling"</b>Teaser in a phone-call format</figcaption></figure>
         <figure><div class="pv"><video src="videos/promo-ai-tech-startups.mp4" poster="images/promo-ai-tech-startups-poster.jpg" controls playsinline preload="none" aria-label="AI, Tech and Startups mixer promo video"></video></div><figcaption><b>AI, Tech and Startups mixer</b>Join-us invitation</figcaption></figure>
         <figure><div class="pv"><video src="videos/promo-networking-mixer.mp4" poster="images/promo-networking-mixer-poster.jpg" controls playsinline preload="none" aria-label="Networking mixer promo video"></video></div><figcaption><b>Networking mixer</b>Night-out recap promo</figcaption></figure>
+        <figure><div class="pv"><video src="videos/ai-real-estate-highlights.mp4" poster="images/ai-real-estate-highlights-poster.jpg" controls playsinline preload="none" aria-label="Highlight reel from the AI in Real Estate mixer"></video></div><figcaption><b>AI in Real Estate mixer</b>Event highlight reel</figcaption></figure>
       </div>
     </div>
 
